@@ -50,7 +50,7 @@ public class Ruleta {
      * @return el tipo de apuesta elegido.
      */
     public static char leerTipoApuesta(Scanner in) {
-        System.out.println("Entra tu tipo de apuesta (R/N/P/I)");
+        System.out.println("Entra tu tipo de apuesta: (R/N/P/I)");
         String input = in.next();
         char leerTipoApuesta = input.charAt(0);
         return leerTipoApuesta;
