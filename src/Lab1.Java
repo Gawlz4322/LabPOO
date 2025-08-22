@@ -10,9 +10,9 @@ public class Ruleta {
     public static int[] numerosRojos =
             {1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36};
 /**
- * Método principal: inicia el programa llamando al menú.
+ * Méodo principal: inicia el programa llamando al menú.
  */
-2
+
     public static void main(String[] args) {
         menu();
     }
@@ -82,7 +82,7 @@ public class Ruleta {
  * @param apuesta monto apostado.
  * @param acierto si el jugador acertó o no.
  */
-4
+
     public static void registrarResultado(int numero, int apuesta, boolean acierto) {}
     /**
      * Muestra en consola el resultado de la ronda.
@@ -96,4 +96,5 @@ public class Ruleta {
 /**
  * Muestra estadísticas generales de todas las rondas jugadas.
  */
-    p
+    public static void mostrarEstadisticas() {}
+}
