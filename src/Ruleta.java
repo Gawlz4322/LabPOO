@@ -19,18 +19,26 @@ public class Ruleta {
     /**
      * Controla el flujo principal del programa mostrando un menú en consola.
      */
-    public static void menu() {}
+    public static void menu() {
+        System.out.println("Bienvenido a la Ruleta del Casino Black Cat");
+        mostrarMenu();
+    }
     /**
      * Muestra en consola las opciones disponibles del menú.
      */
-    public static void mostrarMenu() {}
+    public static void mostrarMenu() {
+        String mostrarMenu = "1. Iniciar Ronda \n"
+                + "2. Mostrar Estadísticas ";
+        System.out.println(mostrarMenu);
+    }
     /**
      * Lee la opción elegida por el usuario desde teclado.
      * @param in Scanner para entrada por consola.
      * @return número de opción ingresado.
      */
     public static int leerOpcion(Scanner in) {
-        return 0;
+        Scanner input = new Scanner(System.in);
+        return input.nextInt();
     }
     /**
      * Ejecuta la acción correspondiente a la opción del menú.
