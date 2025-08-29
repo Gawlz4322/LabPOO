@@ -12,4 +12,13 @@ public class UtilidadesTexto {
         String PalindromoRevertido = new StringBuilder(palindromo).reverse().toString();
         return palindromo.equals(PalindromoRevertido);
     }
+    public int ContarVocales(String vocal) {
+        int total = 0;
+        for (int i = 0; i < vocal.length(); i++) {
+            total = 0;
+            total++;
+        }
+        return total;
+    }
+}
 
