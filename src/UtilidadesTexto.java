@@ -1,17 +1,16 @@
-void main(){
-    menu();
-}
+public class UtilidadesTexto {
 
-public String VerificarPalindromo(String palindromo){
-    palindromo = palindromo.replaceAll("\\s+","").toLowerCase();
-    StringBuilder test = new StringBuilder(palindromo);
-    StringBuilder ReversedTest = test.reverse();
-    if (test == ReversedTest) return True;
-    else{
-        return False;
+    public static void main(String[] args) {
+        menu();
     }
+    public boolean VerificarPalindromo(String palindromo){
+        palindromo = palindromo.replaceAll("\\s+", "").toLowerCase();
+        String PalindromoRevertido = new StringBuilder(palindromo).reverse().toString();
+        return palindromo.equals(PalindromoRevertido);
 
-}
-private void menu(){
-    System.out.println("Menu de :");
-}
+
+    }
+    private void menu(){
+        System.out.println("Menu: \n");
+        System.out.println();
+    }
