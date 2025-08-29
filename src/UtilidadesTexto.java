@@ -24,6 +24,20 @@ public class UtilidadesTexto {
         }
         return total;
     }
+    public String EncriptarTexto(String texto){
+        return texto.replace("a", "@")
+                .replace("e", "&")
+                .replace("i", "¡")
+                .replace("o", ">")
+                .replace("u", "#");
+    }
+    public String DesencriptarTexto(String texto){
+        return texto.replace("@", "a")
+                .replace("&", "e")
+                .replace("¡", "i")
+                .replace(">", "o")
+                .replace("u", "#");
 
+    }
 }
 
