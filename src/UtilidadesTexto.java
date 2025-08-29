@@ -7,10 +7,10 @@ public String VerificarPalindromo(String palindromo){
     StringBuilder test = new StringBuilder(palindromo);
     StringBuilder ReversedTest = test.reverse();
     if (test == ReversedTest){
-        return True
+        return True;
     }
     else{
-        return False
+        return False;
     }
 
 }
