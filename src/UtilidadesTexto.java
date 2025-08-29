@@ -23,12 +23,12 @@ public class UtilidadesTexto {
                 + "5. Salir";
         System.out.println(mostrarMenu);
     }
-    public static boolean VerificarPalindromo(String palindromo){
+    public static boolean verificarPalindromo(String palindromo){
         palindromo = palindromo.replaceAll("\\s+", "").toLowerCase();
         String PalindromoRevertido = new StringBuilder(palindromo).reverse().toString();
         return palindromo.equals(PalindromoRevertido);
     }
-    public static int ContarVocales(String texto) {
+    public static int contarVocales(String texto) {
         int contador = 0;
         texto = texto.toLowerCase();
         for (int i = 0; i < texto.length(); i++) {
@@ -39,14 +39,14 @@ public class UtilidadesTexto {
         }
         return contador;
     }
-    public static String EncriptarTexto(String texto){
+    public static String encriptarTexto(String texto){
         return texto.replace("a", "@")
                 .replace("e", "&")
                 .replace("i", "¡")
                 .replace("o", ">")
                 .replace("u", "#");
     }
-    public static String DesencriptarTexto(String texto){
+    public static String desencriptarTexto(String texto){
         return texto.replace("@", "a")
                 .replace("&", "e")
                 .replace("¡", "i")
@@ -66,6 +66,18 @@ public class UtilidadesTexto {
                 String frase2 = sc.nextLine();
                 System.out.println("Cantidad de vocales: " + contarVocales(frase2));
             }
+            case 3 -> {
+                System.out.print("Ingresa la frase: ");
+                String frase3 = sc.nextLine();
+                System.out.println("Texto encriptado: " + encriptarTexto(frase3));
+            }
+            case 4 -> {
+                System.out.print("Ingresa el texto encriptado: ");
+                String frase4 = sc.nextLine();
+                System.out.println("Texto desencriptado: " + desencriptarTexto(frase4));
+            }
+            case 5 -> System.out.println("Saliendo...");
+            default -> System.out.println("Opción no válida.")
         }
     }
 }
