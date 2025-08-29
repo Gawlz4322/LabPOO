@@ -36,7 +36,7 @@ public class UtilidadesTexto {
                 .replace("&", "e")
                 .replace("¡", "i")
                 .replace(">", "o")
-                .replace("u", "#");
+                .replace("#", "u");
 
     }
 }
