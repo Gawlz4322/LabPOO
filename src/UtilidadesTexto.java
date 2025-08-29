@@ -4,8 +4,12 @@ public class UtilidadesTexto {
         menu();
     }
     private void menu(){
-        System.out.println("Menu: \n");
-        System.out.println();
+        String mostrarMenu = "1. Verificar si una frase es Revés-Derecho \n"
+                + "2. Contar Vocales en una frase "
+                + "3. Encriptar una frase "
+                + "4. Desencriptar una frase"
+                + "5. Salir";
+        System.out.println(mostrarMenu);
     }
     public boolean VerificarPalindromo(String palindromo){
         palindromo = palindromo.replaceAll("\\s+", "").toLowerCase();
@@ -20,5 +24,6 @@ public class UtilidadesTexto {
         }
         return total;
     }
+
 }
 
