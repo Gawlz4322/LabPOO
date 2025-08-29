@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class UtilidadesTexto {
 
-    public static void main(String[] args) {
+    static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int opcion;
 
@@ -13,7 +13,6 @@ public class UtilidadesTexto {
             sc.nextLine();
             redirectador(opcion, sc);
         } while (opcion != 5);
-    }
     }
     private static void menu(){
         String mostrarMenu = "1. Verificar si una frase es Revés-Derecho \n"
@@ -77,7 +76,7 @@ public class UtilidadesTexto {
                 System.out.println("Texto desencriptado: " + desencriptarTexto(frase4));
             }
             case 5 -> System.out.println("Saliendo...");
-            default -> System.out.println("Opción no válida.")
+            default -> System.out.println("Opción no válida.");
         }
     }
 }
