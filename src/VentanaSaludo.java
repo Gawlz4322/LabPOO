@@ -24,6 +24,9 @@ public class VentanaSaludo extends JFrame {
         etiquetaSaludo.setBounds(50,80,300,25);
         etiquetaSaludo.setFont(new Font("Roboto", Font.BOLD, 15));
 
+        JButton botonLimpiar = new JButton("Limpiar");
+        botonLimpiar.setBounds(270, 80, 100, 25);
+
         botonSaludar . addActionListener ( e -> {
             String nombre = campoTexto.getText();
             if (nombre.trim().isEmpty()) {
@@ -40,9 +43,24 @@ public class VentanaSaludo extends JFrame {
                 }
             }
         });
+
+        botonLimpiar.addActionListener(e -> {
+            campoTexto.setText("");
+            etiquetaSaludo.setText("");
+            campoTexto.requestFocus();
+        });
+
+        botonLimpiar.addActionListener(e -> {
+            campoTexto.setText("");
+            etiquetaSaludo.setText("");
+            campoTexto.requestFocus();
+        });
+
+
         ventana.add(campoTexto);
         ventana.add(botonSaludar);
         ventana.add(etiquetaSaludo);
+        ventana.add(botonLimpiar);
         ventana.setLocationRelativeTo(null);
         ventana.setVisible(true);
 
