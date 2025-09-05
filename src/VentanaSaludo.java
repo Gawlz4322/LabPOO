@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class VentanaSaludo extends JFrame {
     public static void main(String[] args) {
@@ -29,14 +31,20 @@ public class VentanaSaludo extends JFrame {
             } else {
                 etiquetaSaludo.setText("Hola: " + nombre);
             }
-        }) ;
+        });
+        campoTexto.addKeyListener(new KeyAdapter() {
+            public void keyPressed(KeyEvent e) {
+                if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+                    botonSaludar.doClick();
+                }
+            }
+        });
         ventana.add(campoTexto);
         ventana.add(botonSaludar);
         ventana.add(etiquetaSaludo);
         ventana.setLocationRelativeTo(null);
         ventana.setVisible(true);
-    }
-    private static void aplicarEstilo() {
-    }
 
+
+    }
 }
