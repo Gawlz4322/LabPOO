@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,9 +28,14 @@ public class VentanaLogin {
 
         lblUsuario.setBounds(50, 80,300,25);
         txtUsuario.setBounds(50, 120,300,25);
+        txtUsuario.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         lblClave.setBounds(50, 160,300,25);
         txtClave.setBounds(50, 200,300,25);
         btnIngresar.setBounds(50, 240,300,25);
+
+        btnIngresar.addActionListener(e -> login());
+
+        mostrarVentana();
 
     }
     public void mostrarVentana(){
@@ -39,8 +45,8 @@ public class VentanaLogin {
     }
     private void login(){
         String u = txtUsuario.getText();
-        String p = txtClave.getText();
-        String nombre = validarCredenciales(String u, String p);
+        String p = new String(txtClave.getPassword());
+        String nombre = validarCredenciales(u, p);
         if (!nombre.isEmpty()) {
             JOptionPane.showMessageDialog(frame, "Bienvenido "+ nombre);
             //Ver como llamar VentanaSaludo
@@ -50,10 +56,19 @@ public class VentanaLogin {
 
     }
     private String validarCredenciales(String u, String p){
-        //TODO
+        for (Usuarios usuarios : USUARIOS){
+            if(usuarios.validarCredenciales(u,p)){
+                return usuarios.getNombre();
+            }
+        }
         return "";
     }
     void abrirRegistro(){
+        abrirRegistro();
 
     }
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(VentanaLogin::new);
+    }
+
 }
