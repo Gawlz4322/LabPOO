@@ -13,8 +13,8 @@ public class VentanaSaludo extends JFrame {
     public VentanaSaludo() {
         super(" App de Saludo ICC490 ");
         setSize(500 , 350);
-        setDefaultCloseOperation ( JFrame . EXIT_ON_CLOSE );
-        setLayout( null ) ;
+        setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE );
+        setLayout( null );
 
         getContentPane().setBackground(new Color(150, 170, 190));
 
