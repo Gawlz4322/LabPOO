@@ -23,8 +23,12 @@ public class VentanaSaludo extends JFrame {
         etiquetaSaludo.setFont(new Font("Roboto", Font.BOLD, 15));
 
         botonSaludar . addActionListener ( e -> {
-            String nombre = campoTexto.getText () ;
-            etiquetaSaludo.setText ("Hola ," + nombre ) ;
+            String nombre = campoTexto.getText();
+            if (nombre.trim().isEmpty()) {
+                JOptionPane.showMessageDialog(null, "Por favor ingresa tu nombre.");
+            } else {
+                etiquetaSaludo.setText("Hola: " + nombre);
+            }
         }) ;
         ventana.add(campoTexto);
         ventana.add(botonSaludar);
