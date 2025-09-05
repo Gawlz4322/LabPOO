@@ -9,7 +9,6 @@ public class VentanaSaludo extends JFrame {
     private final JButton botonLimpiar;
     private final JLabel etiquetaSaludo;
 
-
     public VentanaSaludo() {
         super(" App de Saludo ICC490 ");
         setSize(500 , 350);
