@@ -19,6 +19,7 @@ public class VentanaLogin {
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(400,400);
+        frame.setLayout(null);
 
         frame.add(lblUsuario);
         frame.add(txtUsuario);
@@ -28,7 +29,6 @@ public class VentanaLogin {
 
         lblUsuario.setBounds(50, 80,300,25);
         txtUsuario.setBounds(50, 120,300,25);
-        txtUsuario.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         lblClave.setBounds(50, 160,300,25);
         txtClave.setBounds(50, 200,300,25);
         btnIngresar.setBounds(50, 240,300,25);
@@ -49,7 +49,7 @@ public class VentanaLogin {
         String nombre = validarCredenciales(u, p);
         if (!nombre.isEmpty()) {
             JOptionPane.showMessageDialog(frame, "Bienvenido "+ nombre);
-            //Ver como llamar VentanaSaludo
+            abrirRegistro();
         } else{
             JOptionPane.showMessageDialog(frame, "Usuario o clave incorrecta", "Error", JOptionPane.ERROR_MESSAGE);
         }
@@ -64,7 +64,7 @@ public class VentanaLogin {
         return "";
     }
     void abrirRegistro(){
-        abrirRegistro();
+        new VentanaSaludo();
 
     }
     public static void main(String[] args) {
