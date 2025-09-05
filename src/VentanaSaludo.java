@@ -29,7 +29,8 @@ public class VentanaSaludo extends JFrame {
             if (nombre.trim().isEmpty()) {
                 JOptionPane.showMessageDialog(null, "Por favor ingresa tu nombre.");
             } else {
-                etiquetaSaludo.setText("Hola: " + nombre);
+                Usuario usuario = new Usuario(nombre.trim());
+                etiquetaSaludo.setText(usuario.getSaludo());
             }
         });
         campoTexto.addKeyListener(new KeyAdapter() {
