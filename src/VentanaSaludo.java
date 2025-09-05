@@ -55,8 +55,8 @@ public class VentanaSaludo extends JFrame {
         }
     }
     private void initListeners() {
-        botonSaludar.addActionListener(e -> saludar());
-        botonLimpiar.addActionListener(e -> limpiar());
+        botonSaludar.addActionListener(_ -> saludar());
+        botonLimpiar.addActionListener(_ -> limpiar());
         campoTexto.addKeyListener(new KeyAdapter() {
             public void keyPressed(KeyEvent e) {
                 if (e.getKeyCode() == KeyEvent.VK_ENTER) {
