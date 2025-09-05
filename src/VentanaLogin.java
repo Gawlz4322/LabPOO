@@ -13,12 +13,32 @@ public class VentanaLogin {
     private final JButton btnIngresar = new JButton("Ingresar");
 
     public  VentanaLogin() {
+        USUARIOS.add(new Usuarios("admin", "1234", "Administrador"));
+        USUARIOS.add(new Usuarios("Juanin", "abcd", "Juanin Juan Harry"));
+
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    }
-    public void mostrarVentana(){
+        frame.setSize(400,400);
+
+        frame.add(lblUsuario);
+        frame.add(txtUsuario);
+        frame.add(lblClave);
+        frame.add(txtClave);
+        frame.add(btnIngresar);
+
+        lblUsuario.setBounds(50, 80,300,25);
+        txtUsuario.setBounds(50, 120,300,25);
+        lblClave.setBounds(50, 160,300,25);
+        txtClave.setBounds(50, 200,300,25);
+        btnIngresar.setBounds(50, 240,300,25);
 
     }
+    public void mostrarVentana(){
+        frame.setLocationRelativeTo(null);
+        frame.setResizable(false);
+        frame.setVisible(true);
+    }
     private void login(){
+        btnIngresar.addActionListener(e -> login());
 
     }
     private String validarCredenciales(String u, String p){
