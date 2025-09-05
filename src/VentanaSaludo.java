@@ -4,14 +4,19 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
 public class VentanaSaludo extends JFrame {
+    private final JTextField campoTexto;
+    private final JButton botonSaludar;
+    private final JButton botonLimpiar;
+    private final JLabel etiquetaSaludo;
+
 
     public VentanaSaludo() {
-        JFrame ventana = new JFrame (" App de Saludo ICC490 ");
-        ventana.setSize (500 , 350);
-        ventana.setDefaultCloseOperation ( JFrame . EXIT_ON_CLOSE );
-        ventana.setLayout ( null ) ;
+        super(" App de Saludo ICC490 ");
+        setSize(500 , 350);
+        setDefaultCloseOperation ( JFrame . EXIT_ON_CLOSE );
+        setLayout( null ) ;
 
-        ventana.getContentPane().setBackground(new Color(150, 170, 190));
+        getContentPane().setBackground(new Color(150, 170, 190));
 
         JTextField campoTexto = new JTextField () ;
         campoTexto.setBounds (50 , 50 , 200 , 25);
@@ -30,15 +35,26 @@ public class VentanaSaludo extends JFrame {
         botonLimpiar.setBounds(270, 80, 100, 25);
         botonLimpiar.setFont(new Font ("Arial", Font.BOLD, 15));
 
-        botonSaludar.addActionListener ( e -> {
-            String nombre = campoTexto.getText();
-            if (nombre.trim().isEmpty()) {
-                JOptionPane.showMessageDialog(null, "Por favor ingresa tu nombre.");
-            } else {
-                Usuario usuario = new Usuario(nombre.trim());
-                etiquetaSaludo.setText(usuario.getSaludo());
-            }
-        });
+        add(campoTexto);
+        add(botonSaludar);
+        add(etiquetaSaludo);
+        add(botonLimpiar);
+
+        setLocationRelativeTo(null);
+        setVisible(true);
+    }
+    private void saludar() {
+        String nombre = campoTexto.getText();
+        if (nombre.trim().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Por favor ingresa tu nombre.");
+        } else {
+            Usuario usuario = new Usuario(nombre.trim());
+            etiquetaSaludo.setText(usuario.getSaludo());
+        }
+    }
+    private void initListeners() {
+        botonSaludar.addActionListener(e -> saludar());
+        botonLimpiar.addActionListener(e -> limpiar());
         campoTexto.addKeyListener(new KeyAdapter() {
             public void keyPressed(KeyEvent e) {
                 if (e.getKeyCode() == KeyEvent.VK_ENTER) {
@@ -46,21 +62,13 @@ public class VentanaSaludo extends JFrame {
                 }
             }
         });
-
-        botonLimpiar.addActionListener(e -> {
-            campoTexto.setText("");
-            etiquetaSaludo.setText("");
-            campoTexto.requestFocus();
-        });
-
-
-        ventana.add(campoTexto);
-        ventana.add(botonSaludar);
-        ventana.add(etiquetaSaludo);
-        ventana.add(botonLimpiar);
-        ventana.setLocationRelativeTo(null);
-        ventana.setVisible(true);
     }
+    private void limpiar() {
+        campoTexto.setText("");
+        etiquetaSaludo.setText("");
+        campoTexto.requestFocus();
+    }
+
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(VentanaSaludo::new);
