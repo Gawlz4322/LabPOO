@@ -4,7 +4,8 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
 public class VentanaSaludo extends JFrame {
-    public static void main(String[] args) {
+
+    public VentanaSaludo() {
         JFrame ventana = new JFrame (" App de Saludo ICC490 ");
         ventana.setSize (500 , 350);
         ventana.setDefaultCloseOperation ( JFrame . EXIT_ON_CLOSE );
@@ -14,6 +15,8 @@ public class VentanaSaludo extends JFrame {
 
         JTextField campoTexto = new JTextField () ;
         campoTexto.setBounds (50 , 50 , 200 , 25);
+        campoTexto.setFont(new Font ("Arial", Font.BOLD, 20));
+
         JButton botonSaludar = new JButton (" Saludar ");
         campoTexto.setFont(new Font ("Arial", Font.BOLD, 15));
         botonSaludar.setBounds(270,50 ,100,25);
@@ -27,7 +30,7 @@ public class VentanaSaludo extends JFrame {
         botonLimpiar.setBounds(270, 80, 100, 25);
         botonLimpiar.setFont(new Font ("Arial", Font.BOLD, 15));
 
-        botonSaludar . addActionListener ( e -> {
+        botonSaludar.addActionListener ( e -> {
             String nombre = campoTexto.getText();
             if (nombre.trim().isEmpty()) {
                 JOptionPane.showMessageDialog(null, "Por favor ingresa tu nombre.");
@@ -57,8 +60,10 @@ public class VentanaSaludo extends JFrame {
         ventana.add(botonLimpiar);
         ventana.setLocationRelativeTo(null);
         ventana.setVisible(true);
+    }
 
-
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(VentanaSaludo::new);
     }
 
 
