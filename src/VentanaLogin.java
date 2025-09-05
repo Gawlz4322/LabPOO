@@ -38,7 +38,15 @@ public class VentanaLogin {
         frame.setVisible(true);
     }
     private void login(){
-        btnIngresar.addActionListener(e -> login());
+        String u = txtUsuario.getText();
+        String p = txtClave.getText();
+        String nombre = validarCredenciales(String u, String p);
+        if (!nombre.isEmpty()) {
+            JOptionPane.showMessageDialog(frame, "Bienvenido "+ nombre);
+            //Ver como llamar VentanaSaludo
+        } else{
+            JOptionPane.showMessageDialog(frame, "Usuario o clave incorrecta", "Error", JOptionPane.ERROR_MESSAGE);
+        }
 
     }
     private String validarCredenciales(String u, String p){
