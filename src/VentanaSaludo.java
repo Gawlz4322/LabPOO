@@ -50,12 +50,6 @@ public class VentanaSaludo extends JFrame {
             campoTexto.requestFocus();
         });
 
-        botonLimpiar.addActionListener(e -> {
-            campoTexto.setText("");
-            etiquetaSaludo.setText("");
-            campoTexto.requestFocus();
-        });
-
 
         ventana.add(campoTexto);
         ventana.add(botonSaludar);
