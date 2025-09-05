@@ -15,17 +15,17 @@ public class VentanaSaludo extends JFrame {
         JTextField campoTexto = new JTextField () ;
         campoTexto.setBounds (50 , 50 , 200 , 25);
         JButton botonSaludar = new JButton (" Saludar ");
-        campoTexto.setFont(new Font("Roboto", Font.BOLD, 15));
-
+        campoTexto.setFont(new Font ("Arial", Font.BOLD, 15));
         botonSaludar.setBounds(270,50 ,100,25);
-        botonSaludar.setFont (new Font("Roboto", Font.BOLD, 15));
+        botonSaludar.setFont(new Font ("Arial", Font.BOLD, 15));
 
         JLabel etiquetaSaludo = new JLabel ("") ;
         etiquetaSaludo.setBounds(50,80,300,25);
-        etiquetaSaludo.setFont(new Font("Roboto", Font.BOLD, 15));
+        etiquetaSaludo.setFont(new Font ("Arial", Font.BOLD, 15));
 
         JButton botonLimpiar = new JButton("Limpiar");
         botonLimpiar.setBounds(270, 80, 100, 25);
+        botonLimpiar.setFont(new Font ("Arial", Font.BOLD, 15));
 
         botonSaludar . addActionListener ( e -> {
             String nombre = campoTexto.getText();
