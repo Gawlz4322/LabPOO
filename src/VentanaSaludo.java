@@ -75,5 +75,4 @@ public class VentanaSaludo extends JFrame {
         SwingUtilities.invokeLater(VentanaSaludo::new);
     }
 
-
 }
