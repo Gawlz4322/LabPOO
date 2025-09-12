@@ -24,5 +24,13 @@ public class Menu {
         btnJugar.setBounds(100,150,100,50);
         btnHistorial.setBounds(100,200,100,50);
         btnSalir.setBounds(100,250,100,50);
+
+        mostrarMenu();
     }
+    public void mostrarMenu(){
+        frame.setLocationRelativeTo(null);
+        frame.setResizable(false);
+        frame.setVisible(true);
+        }
+
 }
