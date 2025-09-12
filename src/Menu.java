@@ -33,7 +33,9 @@ public class Menu {
         frame.setVisible(true);
     }
     public void redireccionador(){
-
+        btnSalir.addActionListener(e -> salirMenu());
     }
-
+    public void salirMenu(){
+        frame.dispose();
+    }
 }
