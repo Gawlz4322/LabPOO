@@ -1,7 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Menu {
     private final JFrame frame = new JFrame("Ruleta - Casino Black Cat");
@@ -20,10 +18,10 @@ public class Menu {
         frame.add(btnHistorial);
         frame.add(btnSalir);
 
-        btnInicio.setBounds(10,100,100,50);
-        btnJugar.setBounds(100,150,100,50);
-        btnHistorial.setBounds(100,200,100,50);
-        btnSalir.setBounds(100,250,100,50);
+        btnInicio.setBounds(10,100,80,40);
+        btnJugar.setBounds(10,150,80,40);
+        btnHistorial.setBounds(10,200,80,40);
+        btnSalir.setBounds(10,250,80,40);
 
         mostrarMenu();
         redireccionador();
@@ -42,7 +40,7 @@ public class Menu {
         frame.dispose();
     }
     public void jugarRuleta(){
-
+        new Ruleta();
     }
     public void historialVentanas(){
         JOptionPane.showMessageDialog(frame, "Funcionalidad aún no implementada");
