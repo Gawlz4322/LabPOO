@@ -8,6 +8,7 @@ public class Menu {
     private final JButton btnInicio = new JButton("Inicio");
     private final JButton btnJugar = new JButton("Jugar");
     private final JButton btnHistorial = new JButton("Historial");
+    private final JButton btnSalir = new JButton("Salir");
 
     public  Menu() {
         frame.setLayout(null);
@@ -17,5 +18,11 @@ public class Menu {
         frame.add(btnInicio);
         frame.add(btnJugar);
         frame.add(btnHistorial);
+        frame.add(btnSalir);
+
+        btnInicio.setBounds(100,100,100,50);
+        btnJugar.setBounds(100,150,100,50);
+        btnHistorial.setBounds(100,200,100,50);
+        btnSalir.setBounds(100,250,100,50);
     }
 }
