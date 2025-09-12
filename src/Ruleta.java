@@ -9,33 +9,26 @@ public class Ruleta {
     public static Random rng = new Random();
     public static int[] numerosRojos =
             {1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36};
-/**
- * Méodo principal: inicia el programa llamando al menú.
- */
 
     public static void main(String[] args) {
         menu();
     }
     /**
-     * Controla el flujo principal del programa mostrando un menú en consola.
+     * Llama a menú.
      */
     public static void menu() {
         System.out.println("Bienvenido a la Ruleta del Casino Black Cat");
         mostrarMenu();
     }
     /**
-     * Muestra en consola las opciones disponibles del menú.
+     * TODO: Cambiar de consola a ventana.
      */
     public static void mostrarMenu() {
         String mostrarMenu = "1. Iniciar Ronda \n"
                 + "2. Mostrar Estadísticas ";
         System.out.println(mostrarMenu);
     }
-    /**
-     * Lee la opción elegida por el usuario desde teclado.
-     * @param in Scanner para entrada por consola.
-     * @return número de opción ingresado.
-     */
+
     public static int leerOpcion(Scanner in) {
         Scanner input = new Scanner(System.in);
         return input.nextInt();
@@ -60,8 +53,7 @@ public class Ruleta {
     public static char leerTipoApuesta(Scanner in) {
         System.out.println("Entra tu tipo de apuesta: (R/N/P/I)");
         String input = in.next();
-        char leerTipoApuesta = input.charAt(0);
-        return leerTipoApuesta;
+        return input.charAt(0);
     }
     /**
      * Simula el giro de la ruleta generando un número aleatorio de 0 a 36.
