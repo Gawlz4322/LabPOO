@@ -10,6 +10,11 @@ public class Menu {
     private final JButton btnHistorial = new JButton("Historial");
     private final JButton btnSalir = new JButton("Salir");
     private final JLabel lblExplicacionTitulo = new JLabel("Ruleta - Casino Black Cat");
+    private final JTextArea lblExplicacionCuerpo = new JTextArea("Bienvenido al menú principal\n\n"
+            +"A la izquierda tienes:\n\n"
+            +"Jugar: Abre la ventana de juego\n\n"
+            +"Historial: Abre la ventana de historial\n\n"
+            +"Salir: Cierra sesión y vuelve al login");
 
     public  Menu() {
         frame.setLayout(null);
@@ -29,7 +34,13 @@ public class Menu {
         frame.add(lblExplicacionTitulo);
         lblExplicacionTitulo.setHorizontalAlignment(SwingConstants.CENTER);
         lblExplicacionTitulo.setBounds(150,50,150,50);
-
+        frame.add(lblExplicacionCuerpo);
+        lblExplicacionCuerpo.setBounds(100,100,200,250);
+        lblExplicacionCuerpo.setBorder(BorderFactory.createLineBorder(BLACK));
+        lblExplicacionCuerpo.setEditable(false);
+        lblExplicacionCuerpo.setOpaque(false);
+        lblExplicacionCuerpo.setLineWrap(true);
+        lblExplicacionCuerpo.setWrapStyleWord(true);
         mostrarMenu();
         redireccionador();
     }
