@@ -39,4 +39,10 @@ public class Menu {
     public void salirMenu(){
         frame.dispose();
     }
+    public void jugarRuleta(){
+
+    }
+    public void historialVentanas(){
+
+    }
 }
