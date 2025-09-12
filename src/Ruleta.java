@@ -24,9 +24,7 @@ public class Ruleta {
      * TODO: Cambiar de consola a ventana.
      */
     public static void mostrarMenu() {
-        String mostrarMenu = "1. Iniciar Ronda \n"
-                + "2. Mostrar Estadísticas ";
-        System.out.println(mostrarMenu);
+
     }
 
     public static int leerOpcion(Scanner in) {
