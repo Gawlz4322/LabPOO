@@ -54,4 +54,19 @@ public class VentanaLoginRuleta {    public static final List<Usuarios> USUARIOS
         }
 
     }
+    private String validarCredenciales(String u, String p){
+        for (Usuarios usuarios : USUARIOS){
+            if(usuarios.validarCredenciales(u,p)){
+                return usuarios.getNombre();
+            }
+        }
+        return "";
+    }
+    void abrirRegistro(){
+        new VentanaSaludo();
+
+    }
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(VentanaLogin::new);
+    }
 }
