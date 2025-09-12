@@ -48,6 +48,7 @@ public class VentanaLoginRuleta {    public static final List<Usuario> USUARIOS 
         String nombre = validarCredenciales(u, p);
         if (!nombre.isEmpty()) {
             JOptionPane.showMessageDialog(frame, "Bienvenido "+ nombre);
+            new Menu();
         } else{
             JOptionPane.showMessageDialog(frame, "Usuario o clave incorrecta", "Error", JOptionPane.ERROR_MESSAGE);
         }
