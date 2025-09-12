@@ -37,5 +37,21 @@ public class VentanaLoginRuleta {    public static final List<Usuarios> USUARIOS
         mostrarVentana();
 
     }
+    public void mostrarVentana(){
+        frame.setLocationRelativeTo(null);
+        frame.setResizable(false);
+        frame.setVisible(true);
+    }
+    private void login(){
+        String u = txtUsuario.getText();
+        String p = new String(txtClave.getPassword());
+        String nombre = validarCredenciales(u, p);
+        if (!nombre.isEmpty()) {
+            JOptionPane.showMessageDialog(frame, "Bienvenido "+ nombre);
+            abrirRegistro();
+        } else{
+            JOptionPane.showMessageDialog(frame, "Usuario o clave incorrecta", "Error", JOptionPane.ERROR_MESSAGE);
+        }
 
+    }
 }
