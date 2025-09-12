@@ -3,7 +3,7 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class VentanaLoginRuleta {    public static final List<Usuarios> USUARIOS = new ArrayList<>();
+public class VentanaLoginRuleta {    public static final List<Usuario> USUARIOS = new ArrayList<>();
 
     private final JFrame frame = new JFrame("Login - Casino Black Cat");
     private final JLabel lblUsuario = new JLabel("Usuario:");
@@ -12,9 +12,9 @@ public class VentanaLoginRuleta {    public static final List<Usuarios> USUARIOS
     private final JPasswordField txtClave = new JPasswordField();
     private final JButton btnIngresar = new JButton("Ingresar");
 
-    public  VentanaLogin() {
-        USUARIOS.add(new Usuarios("admin", "1234", "Administrador"));
-        USUARIOS.add(new Usuarios("Juanin", "abcd", "Juanin Juan Harry"));
+    public  VentanaLoginRuleta() {
+        USUARIOS.add(new Usuario("admin", "1234", "Administrador"));
+        USUARIOS.add(new Usuario("Juanin", "abcd", "Juanin Juan Harry"));
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(400,400);
@@ -55,18 +55,14 @@ public class VentanaLoginRuleta {    public static final List<Usuarios> USUARIOS
 
     }
     private String validarCredenciales(String u, String p){
-        for (Usuarios usuarios : USUARIOS){
+        for (Usuario usuarios : USUARIOS){
             if(usuarios.validarCredenciales(u,p)){
                 return usuarios.getNombre();
             }
         }
         return "";
     }
-    void abrirRegistro(){
-        new VentanaSaludo();
-
-    }
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(VentanaLogin::new);
+        SwingUtilities.invokeLater(VentanaLoginRuleta::new);
     }
 }
