@@ -26,6 +26,7 @@ public class Menu {
         btnSalir.setBounds(100,250,100,50);
 
         mostrarMenu();
+        redireccionador();
     }
     public void mostrarMenu(){
         frame.setLocationRelativeTo(null);
