@@ -20,7 +20,7 @@ public class Menu {
         frame.add(btnHistorial);
         frame.add(btnSalir);
 
-        btnInicio.setBounds(100,100,100,50);
+        btnInicio.setBounds(10,100,100,50);
         btnJugar.setBounds(100,150,100,50);
         btnHistorial.setBounds(100,200,100,50);
         btnSalir.setBounds(100,250,100,50);
@@ -31,6 +31,9 @@ public class Menu {
         frame.setLocationRelativeTo(null);
         frame.setResizable(false);
         frame.setVisible(true);
-        }
+    }
+    public void redireccionador(){
+
+    }
 
 }
