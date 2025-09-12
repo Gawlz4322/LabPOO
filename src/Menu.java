@@ -35,6 +35,8 @@ public class Menu {
     }
     public void redireccionador(){
         btnSalir.addActionListener(e -> salirMenu());
+        btnHistorial.addActionListener(e -> historialVentanas());
+        btnJugar.addActionListener(e -> jugarRuleta());
     }
     public void salirMenu(){
         frame.dispose();
@@ -43,6 +45,6 @@ public class Menu {
 
     }
     public void historialVentanas(){
-
+        JOptionPane.showMessageDialog(frame, "Funcionalidad aún no implementada");
     }
 }
