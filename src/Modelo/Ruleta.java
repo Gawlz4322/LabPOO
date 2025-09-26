@@ -1,6 +1,7 @@
 package Modelo;
 
 import Vista.VentanaLoginRuleta;
+import Vista.VentanaRuleta;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -28,7 +29,7 @@ public class Ruleta {
      * TODO: Cambiar de consola a ventana.
      */
     public static void mostrarMenu() {
-
+        new VentanaRuleta();
     }
 
     public static int leerOpcion(Scanner in) {
@@ -102,4 +103,7 @@ public class Ruleta {
  * Muestra estadísticas generales de todas las rondas jugadas.
  */
     public static void mostrarEstadisticas() {}
+
+    public String getSaldo() {
+    }
 }
