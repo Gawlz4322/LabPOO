@@ -6,7 +6,7 @@ import Vista.VentanaRuleta;
 
 public class Launcher {
     public static void main(String[] args) {
-        Ruleta modelo = new Ruleta(1000);
+        Ruleta modelo = new Ruleta();
         VentanaRuleta vista = new VentanaRuleta();
         new RuletaController(modelo, vista);
     }
