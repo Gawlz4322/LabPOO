@@ -12,10 +12,11 @@ public class VentanaRuleta {
     private final JComboBox<TipoApuesta> cboTipo = new JComboBox<>(TipoApuesta.values());
     private final JButton btnGirar = new JButton("Girar");
     private final JTextArea txtResultado = new JTextArea();
+    private final JLabel lblSaldo = new JLabel("Saldo: $0");
 
     public VentanaRuleta() {
         iniciarVentanaRuleta();
-        iniciarBotones();
+        iniciarComponentes();
     }
     private void iniciarVentanaRuleta() {
         frame.setVisible(true);
@@ -25,15 +26,11 @@ public class VentanaRuleta {
         frame.setResizable(false);
         frame.setLocationRelativeTo(null);
     }
-    private void iniciarBotones(){
-        Ruleta ruleta = null;
-        //temporal, ver como arreglar
-        JLabel lblSaldo = new JLabel("Saldo: $" + ruleta.getSaldo());
-        lblSaldo.setBounds(30, 10, 200, 30);
-
+    private void iniciarComponentes() {
         JLabel lblApuesta = new JLabel("Monto:");
         lblApuesta.setBounds(30, 50, 50, 30);
         txtApuesta.setBounds(90, 50, 100, 30);
+        lblSaldo.setBounds(30, 10, 200, 30);
 
         cboTipo.setBounds(210, 50, 100, 30);
         btnGirar.setBounds(330, 50, 100, 30);
@@ -56,4 +53,10 @@ public class VentanaRuleta {
             //continuar pero se debe hacer Ruleta primero
         //}
     //}
+    public JFrame getFrame() { return frame; }
+    public JTextField getTxtApuesta() { return txtApuesta; }
+    public JComboBox<TipoApuesta> getCboTipo() { return cboTipo; }
+    public JButton getBtnGirar() { return btnGirar; }
+    public JTextArea getTxtResultado() { return txtResultado; }
+    public JLabel getLblSaldo() { return lblSaldo; }
 }
