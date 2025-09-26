@@ -17,7 +17,5 @@ public class Usuario {
     public String getNombre() {
         return nombre;
     }
-    public Usuario(){
-        this("Invitado");
-    }
+    //ver como hacer constructor vacío para invitado
 }
