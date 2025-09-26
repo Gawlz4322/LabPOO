@@ -15,6 +15,7 @@ public class VentanaRuleta {
 
     public VentanaRuleta() {
         iniciarVentanaRuleta();
+        iniciarBotones();
     }
     private void iniciarVentanaRuleta() {
         frame.setVisible(true);
@@ -46,6 +47,13 @@ public class VentanaRuleta {
         frame.add(cboTipo);
         frame.add(btnGirar);
         frame.add(txtResultado);
-
     }
+    //private void jugarRuleta(JLabel lblSaldo){
+        //try{
+            //int monto = Integer.parseInt(txtApuesta.getText());
+            //TipoApuesta tipo = (TipoApuesta)cboTipo.getSelectedItem();
+            //int numero = ruleta.girar():
+            //continuar pero se debe hacer Ruleta primero
+        //}
+    //}
 }
