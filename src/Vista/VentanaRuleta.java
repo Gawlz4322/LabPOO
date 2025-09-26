@@ -45,14 +45,6 @@ public class VentanaRuleta {
         frame.add(btnGirar);
         frame.add(txtResultado);
     }
-    //private void jugarRuleta(JLabel lblSaldo){
-        //try{
-            //int monto = Integer.parseInt(txtApuesta.getText());
-            //TipoApuesta tipo = (TipoApuesta)cboTipo.getSelectedItem();
-            //int numero = ruleta.girar():
-            //continuar pero se debe hacer Ruleta primero
-        //}
-    //}
     public JFrame getFrame() { return frame; }
     public JTextField getTxtApuesta() { return txtApuesta; }
     public JComboBox<TipoApuesta> getCboTipo() { return cboTipo; }

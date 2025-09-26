@@ -14,4 +14,15 @@ public class RuletaController {
         this.ruleta = ruleta;
         this.ventanaRuleta = vista;
     }
+    private void lectorEventos(){
+
+    }
+    //private void jugarRuleta(JLabel lblSaldo){
+        //try{
+            //int monto = Integer.parseInt(txtApuesta.getText());
+            //TipoApuesta tipo = (TipoApuesta)cboTipo.getSelectedItem();
+            //int numero = ruleta.girar():
+            //continuar pero se debe hacer Ruleta primero
+        //}
+    //}
 }
