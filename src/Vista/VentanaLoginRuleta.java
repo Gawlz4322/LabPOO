@@ -1,5 +1,9 @@
+package Vista;
+
+import Modelo.Menu;
+import Modelo.Usuario;
+
 import javax.swing.*;
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -50,7 +54,7 @@ public class VentanaLoginRuleta {    public static final List<Usuario> USUARIOS 
             JOptionPane.showMessageDialog(frame, "Bienvenido "+ nombre);
             new Menu();
         } else{
-            JOptionPane.showMessageDialog(frame, "Usuario o clave incorrecta", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(frame, "Modelo.Usuario o clave incorrecta", "Error", JOptionPane.ERROR_MESSAGE);
         }
 
     }

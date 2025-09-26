@@ -1,15 +1,16 @@
+package Modelo;
+
 import javax.swing.*;
-import java.awt.*;
 
 import static java.awt.Color.BLACK;
 
 public class Menu {
-    private final JFrame frame = new JFrame("Ruleta - Casino Black Cat");
+    private final JFrame frame = new JFrame("Modelo.Ruleta - Casino Black Cat");
     private final JButton btnInicio = new JButton("Inicio");
     private final JButton btnJugar = new JButton("Jugar");
     private final JButton btnHistorial = new JButton("Historial");
     private final JButton btnSalir = new JButton("Salir");
-    private final JLabel lblExplicacionTitulo = new JLabel("Ruleta - Casino Black Cat");
+    private final JLabel lblExplicacionTitulo = new JLabel("Modelo.Ruleta - Casino Black Cat");
     private final JTextArea lblExplicacionCuerpo = new JTextArea("Bienvenido al menú principal\n\n"
             +"A la izquierda tienes:\n\n"
             +"Jugar: Abre la ventana de juego\n\n"

@@ -1,3 +1,7 @@
+package Modelo;
+
+import Vista.VentanaLoginRuleta;
+
 import java.util.Random;
 import java.util.Scanner;
 public class Ruleta {
@@ -17,7 +21,7 @@ public class Ruleta {
      * Llama a menú.
      */
     public static void menu() {
-        System.out.println("Bienvenido a la Ruleta del Casino Black Cat");
+        System.out.println("Bienvenido a la Modelo.Ruleta del Casino Black Cat");
         mostrarMenu();
     }
     /**
