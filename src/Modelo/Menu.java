@@ -1,70 +1,35 @@
 package Modelo;
 
+import Vista.VentanaMenu;
 import javax.swing.*;
 
-import static java.awt.Color.BLACK;
-
 public class Menu {
-    private final JFrame frame = new JFrame("Modelo.Ruleta - Casino Black Cat");
-    private final JButton btnInicio = new JButton("Inicio");
-    private final JButton btnJugar = new JButton("Jugar");
-    private final JButton btnHistorial = new JButton("Historial");
-    private final JButton btnSalir = new JButton("Salir");
-    private final JLabel lblExplicacionTitulo = new JLabel("Modelo.Ruleta - Casino Black Cat");
-    private final JTextArea lblExplicacionCuerpo = new JTextArea("Bienvenido al menú principal\n\n"
-            +"A la izquierda tienes:\n\n"
-            +"Jugar: Abre la ventana de juego\n\n"
-            +"Historial: Abre la ventana de historial\n\n"
-            +"Salir: Cierra sesión y vuelve al login");
+    private final VentanaMenu menu;
 
-    public  Menu() {
-        frame.setLayout(null);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(400,400);
-
-        frame.add(btnInicio);
-        frame.add(btnJugar);
-        frame.add(btnHistorial);
-        frame.add(btnSalir);
-
-        btnInicio.setBounds(10,100,80,40);
-        btnJugar.setBounds(10,150,80,40);
-        btnHistorial.setBounds(10,200,80,40);
-        btnSalir.setBounds(10,250,80,40);
-
-        frame.add(lblExplicacionTitulo);
-        lblExplicacionTitulo.setHorizontalAlignment(SwingConstants.CENTER);
-        lblExplicacionTitulo.setBounds(150,50,150,50);
-        frame.add(lblExplicacionCuerpo);
-        lblExplicacionCuerpo.setBounds(100,100,200,250);
-        lblExplicacionCuerpo.setBorder(BorderFactory.createLineBorder(BLACK));
-        lblExplicacionCuerpo.setEditable(false);
-        lblExplicacionCuerpo.setOpaque(false);
-        lblExplicacionCuerpo.setLineWrap(true);
-        lblExplicacionCuerpo.setWrapStyleWord(true);
-        mostrarMenu();
+    public Menu(){
+        menu = new VentanaMenu();
         redireccionador();
     }
-    public void mostrarMenu(){
-        frame.setLocationRelativeTo(null);
-        frame.setResizable(false);
-        frame.setVisible(true);
+
+    private void redireccionador(){
+        menu.getBtnSalir().addActionListener(e -> salirMenu());
+        menu.getBtnHistorial().addActionListener(e -> historialVentanas());
+        menu.getBtnJugar().addActionListener(e -> jugarRuleta());
     }
-    public void redireccionador(){
-        btnSalir.addActionListener(e -> salirMenu());
-        btnHistorial.addActionListener(e -> historialVentanas());
-        btnJugar.addActionListener(e -> jugarRuleta());
+
+    private void salirMenu(){
+        menu.getFrame().dispose();
     }
-    public void salirMenu(){
-        frame.dispose();
-    }
-    public void jugarRuleta(){
+
+    private void jugarRuleta(){
         new Ruleta();
     }
-    public void historialVentanas(){
-        JOptionPane.showMessageDialog(frame, "Funcionalidad aún no implementada");
+
+    private void historialVentanas(){
+        JOptionPane.showMessageDialog(menu.getFrame(), "Funcionalidad aún no implementada");
     }
-    static void main(String[] args) {
+
+    public static void main(String[] args) {
         SwingUtilities.invokeLater(Menu::new);
     }
 }
