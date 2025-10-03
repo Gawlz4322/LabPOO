@@ -40,15 +40,27 @@ public class Ruleta {
      * @param in Scanner para entrada por consola.
      */
     public static void ejecutarOpcion(int opcion, Scanner in) {}
-    /**
-     * Inicia una ronda de la ruleta: leer apuesta, girar, evaluar y mostrar resultado.
-     * @param in Scanner para entrada por consola.
-     */
-    public static void iniciarRonda(Scanner in) {
-        //leerTipoApuesta(Scanner in);
-        girarRuleta();
-        //evaluarResultado();
 
+    public static void iniciarRonda(Scanner in) {
+        char tipoChar = leerTipoApuesta(in);
+        TipoApuesta tipoApuesta = null;
+
+        switch (Character.toUpperCase(tipoChar)) {
+            case 'R' -> tipoApuesta = ROJO;
+            case 'N' -> tipoApuesta = NEGRO;
+            case 'P' -> tipoApuesta = PAR;
+            case 'I' -> tipoApuesta = IMPAR;
+            default -> {
+                System.out.println("Tipo de apuesta inválido.");
+                return;
+            }
+        }
+        System.out.println("Entra el monto a apostar:");
+        int monto = in.nextInt();
+        int numeroGanador = girarRuleta();
+        boolean acierto = evaluarResultado(numeroGanador, tipoApuesta);
+        registrarResultado(numeroGanador, monto, acierto);
+        mostrarResultado(numeroGanador, tipoChar, monto, acierto);
     }
 
     public static char leerTipoApuesta(Scanner in) {
@@ -84,12 +96,6 @@ public class Ruleta {
         }
         return false;
     }
-/**
- * Registra los resultados de la ronda en los arreglos de historial.
- * @param numero número obtenido en la ruleta.
- * @param apuesta monto apostado.
- * @param acierto si el jugador acertó o no.
- */
 
     public static void registrarResultado(int numero, int apuesta, boolean acierto) {
         if (historialSize < MAX_HISTORIAL) {
@@ -110,7 +116,9 @@ public class Ruleta {
      * @param acierto si el jugador ganó o perdió.
      */
     public static void mostrarResultado(int numero, char tipo, int monto, boolean
-            acierto) {}
+            acierto) {
+        System.out.println();
+    }
 /**
  * Muestra estadísticas generales de todas las rondas jugadas.
  */
