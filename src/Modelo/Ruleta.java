@@ -18,12 +18,12 @@ public class Ruleta {
     private static final int[] numerosRojos =
             {1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36};
 
-    public static void main(String[] args) {
+     static void main(String[] args) {
         new VentanaRuleta();
     }
 
     public static void menu() {
-        System.out.println("Bienvenido a la Modelo.Ruleta del Casino Black Cat");
+        System.out.println("Bienvenido a la Modelo. Ruleta del Casino Black Cat");
         mostrarMenu();
     }
     public static void mostrarMenu() {
@@ -44,13 +44,13 @@ public class Ruleta {
      * Inicia una ronda de la ruleta: leer apuesta, girar, evaluar y mostrar resultado.
      * @param in Scanner para entrada por consola.
      */
-    public static void iniciarRonda(Scanner in) {}
-    /**
-     * Permite al usuario seleccionar el tipo de apuesta (R/N/P/I).
-     * @param in Scanner para entrada por consola.
-    3
-     * @return el tipo de apuesta elegido.
-     */
+    public static void iniciarRonda(Scanner in) {
+        //leerTipoApuesta(Scanner in);
+        girarRuleta();
+        //evaluarResultado();
+
+    }
+
     public static char leerTipoApuesta(Scanner in) {
         System.out.println("Entra tu tipo de apuesta: (R/N/P/I)");
         String input = in.next();
@@ -72,11 +72,7 @@ public class Ruleta {
         };
 
     }
-    /**
-     * Determina si un número corresponde a color rojo.
-     * @param n número de la ruleta.
-     * @return true si es rojo, false en caso contrario.
-     */
+
     public static boolean esRojo(int n) {
         if (n== 0){
             return false;
