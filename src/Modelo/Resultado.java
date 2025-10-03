@@ -16,7 +16,6 @@ public class Resultado {
         this.tipoApuesta = tipoApuesta;
         this.fechaHora = LocalDateTime.now();
     }
-
     public int getNumeroGanador() { return numeroGanador; }
     public int getMontoApostado() { return montoApostado; }
     public boolean isAcierto() { return acierto; }
