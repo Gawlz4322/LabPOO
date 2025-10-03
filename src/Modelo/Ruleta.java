@@ -5,6 +5,9 @@ import Vista.VentanaRuleta;
 
 import java.util.Random;
 import java.util.Scanner;
+
+import static Modelo.TipoApuesta.*;
+
 public class Ruleta {
     public static final int MAX_HISTORIAL = 100;
     public static int[] historialNumeros = new int[MAX_HISTORIAL];
@@ -56,14 +59,18 @@ public class Ruleta {
     public static int girarRuleta() {
         return rng.nextInt(37);
     }
-    /**
-     * Evalúa si la apuesta realizada por el jugador fue acertada.
-     * @param numero número obtenido en la ruleta.
-     * @param tipo tipo de apuesta elegida.
-     * @return true si acertó, false si perdió.
-     */
+
     public static boolean evaluarResultado(int numero, char tipo) {
-        return false;
+        if (numero == 0) {
+            return false;
+        }
+        return switch (tipo) {
+            case ROJO -> esRojo(numero);
+            case NEGRO -> !esRojo(numero);
+            case PAR -> numero % 2 == 0;
+            case IMPAR -> numero % 2 != 0;
+        };
+
     }
     /**
      * Determina si un número corresponde a color rojo.
