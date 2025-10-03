@@ -60,7 +60,7 @@ public class Ruleta {
         return rng.nextInt(37);
     }
 
-    public static boolean evaluarResultado(int numero, char tipo) {
+    public static boolean evaluarResultado(int numero, TipoApuesta tipo) {
         if (numero == 0) {
             return false;
         }
@@ -91,7 +91,17 @@ public class Ruleta {
  * @param acierto si el jugador acertó o no.
  */
 
-    public static void registrarResultado(int numero, int apuesta, boolean acierto) {}
+    public static void registrarResultado(int numero, int apuesta, boolean acierto) {
+        if (historialSize < MAX_HISTORIAL) {
+            historialNumeros[historialSize] = numero;
+            historialApuestas[historialSize] = apuesta;
+            historialAciertos[historialSize] = acierto;
+            historialSize++;
+        } else {
+            System.out.println("Historial lleno. No se puede registrar.");
+        }
+
+    }
     /**
      * Muestra en consola el resultado de la ronda.
      * @param numero número obtenido en la ruleta.
