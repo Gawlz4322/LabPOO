@@ -108,17 +108,8 @@ public class Ruleta {
         }
 
     }
-    /**
-     * Muestra en consola el resultado de la ronda.
-     * @param numero número obtenido en la ruleta.
-     * @param tipo tipo de apuesta realizada.
-     * @param monto monto apostado.
-     * @param acierto si el jugador ganó o perdió.
-     */
-    public static void mostrarResultado(int numero, char tipo, int monto, boolean
-            acierto) {
-        System.out.println();
-    }
+
+
 /**
  * Muestra estadísticas generales de todas las rondas jugadas.
  */
