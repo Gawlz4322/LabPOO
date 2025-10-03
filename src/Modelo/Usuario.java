@@ -1,6 +1,11 @@
 package Modelo;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class Usuario {
+    private final List<Resultado> historial = new ArrayList<>();
     private String username;
     private String password;
     private String nombre;
@@ -18,4 +23,10 @@ public class Usuario {
         return nombre;
     }
     //ver como hacer constructor vacío para invitado
+    public void agregarResultado(Resultado r) {
+        historial.add(r);
+    }
+    public List<Resultado> getHistorial() {
+        return Collections.unmodifiableList(historial);
+    }
 }
