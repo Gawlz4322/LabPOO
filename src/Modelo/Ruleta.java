@@ -78,6 +78,14 @@ public class Ruleta {
      * @return true si es rojo, false en caso contrario.
      */
     public static boolean esRojo(int n) {
+        if (n== 0){
+            return false;
+        }
+        for (int rojo : numerosRojos){
+            if (rojo == n){
+                return true;
+            }
+        }
         return false;
     }
 /**
