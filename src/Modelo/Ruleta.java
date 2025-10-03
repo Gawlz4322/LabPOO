@@ -12,22 +12,17 @@ public class Ruleta {
     public static boolean[] historialAciertos = new boolean[MAX_HISTORIAL];
     public static int historialSize = 0;
     public static Random rng = new Random();
-    public static int[] numerosRojos =
+    private static final int[] numerosRojos =
             {1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36};
 
     public static void main(String[] args) {
-        new VentanaLoginRuleta();
+        new VentanaRuleta();
     }
-    /**
-     * Llama a menú.
-     */
+
     public static void menu() {
         System.out.println("Bienvenido a la Modelo.Ruleta del Casino Black Cat");
         mostrarMenu();
     }
-    /**
-     * TODO: Cambiar de consola a ventana.
-     */
     public static void mostrarMenu() {
         new VentanaRuleta();
     }
@@ -58,12 +53,8 @@ public class Ruleta {
         String input = in.next();
         return input.charAt(0);
     }
-    /**
-     * Simula el giro de la ruleta generando un número aleatorio de 0 a 36.
-     * @return número de la ruleta.
-     */
     public static int girarRuleta() {
-        return 0;
+        return rng.nextInt(37);
     }
     /**
      * Evalúa si la apuesta realizada por el jugador fue acertada.
@@ -104,6 +95,9 @@ public class Ruleta {
  */
     public static void mostrarEstadisticas() {}
 
+    /**
     public String getSaldo() {
+        return null;
     }
+     */
 }
