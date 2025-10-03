@@ -7,16 +7,20 @@ import Vista.VentanaRuleta;
 import javax.swing.*;
 
 public class RuletaController {
+    private final SessionController session;
     public Ruleta ruleta;
     public VentanaRuleta ventanaRuleta;
 
-    public RuletaController(Ruleta ruleta, VentanaRuleta vista) {
+    public RuletaController(Ruleta ruleta, VentanaRuleta vista, SessionController session) {
         this.ruleta = ruleta;
         this.ventanaRuleta = vista;
+        this.session = session;
     }
-    private void lectorEventos(){
+
+    private void lectorEventos() {
 
     }
+
     //private void jugarRuleta(JLabel lblSaldo){
         //try{
             //int monto = Integer.parseInt(txtApuesta.getText());
@@ -25,4 +29,7 @@ public class RuletaController {
             //continuar pero se debe hacer Ruleta primero
         //}
     //}
+    public RuletaController(Ruleta ruleta, SessionController session) {
+        this.session = session;
+    }
 }
