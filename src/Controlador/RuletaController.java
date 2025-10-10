@@ -42,15 +42,17 @@ public class RuletaController {
 
         try {
             int monto = Integer.parseInt(ventanaRuleta.getTxtApuesta().getText());
-            TipoApuesta tipo = (TipoApuesta) ventanaRuleta.getCboTipo().getSelectedItem();
-
+            TipoApuesta tipo = (TipoApuesta) Objects.requireNonNull(ventanaRuleta.getCboTipo().getSelectedItem());
             if (monto <= 0) {
                 JOptionPane.showMessageDialog(ventanaRuleta.getFrame(), "El monto debe ser positivo.", "Error de Apuesta", JOptionPane.WARNING_MESSAGE);
                 return;
             }
+            if (usuario.getSaldo() < monto) {
+                JOptionPane.showMessageDialog(ventanaRuleta.getFrame(), "Saldo insuficiente.");
+                return;
+            }
             int numeroGanador = ruleta.girarRuleta();
             boolean acierto = ruleta.evaluarResultado(numeroGanador, tipo);
-
             Resultado resultado = new Resultado(numeroGanador, monto, acierto, tipo);
             ruleta.registrarResultado(numeroGanador, monto, acierto);
             usuario.agregarResultado(resultado);
