@@ -1,13 +1,17 @@
 package Launcher;
 
-import Controlador.RuletaController;
-import Modelo.Ruleta;
-import Vista.VentanaRuleta;
+import Controlador.SessionController;
+import Vista.VentanaLoginRuleta;
+import javax.swing.SwingUtilities;
 
 public class Launcher {
     public static void main(String[] args) {
-        Ruleta modelo = new Ruleta();
-        VentanaRuleta vista = new VentanaRuleta();
-        new RuletaController(modelo, vista);
+        SwingUtilities.invokeLater(() -> {
+            SessionController session = new SessionController();
+            session.registrarUsuario("admin", "1234", "Administrador");
+            session.registrarUsuario("Juanin", "abcd", "Juanin Harry");
+            new VentanaLoginRuleta(session).mostrarVentana();
+        });
     }
+
 }
