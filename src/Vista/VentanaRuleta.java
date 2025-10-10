@@ -1,8 +1,6 @@
 package Vista;
 
-import Modelo.Ruleta;
 import Modelo.TipoApuesta;
-
 import javax.swing.*;
 import java.awt.*;
 
@@ -21,7 +19,7 @@ public class VentanaRuleta {
     private void iniciarVentanaRuleta() {
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        frame.setLayout(new BorderLayout());
+        frame.setLayout(null);
         frame.setSize(800, 600);
         frame.setResizable(false);
         frame.setLocationRelativeTo(null);
