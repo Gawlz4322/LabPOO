@@ -39,8 +39,4 @@ public class Menu {
     private void historialVentanas(){
         JOptionPane.showMessageDialog(menu.getFrame(), "Funcionalidad aún no implementada");
     }
-
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(Menu::new);
-    }
 }
