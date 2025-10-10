@@ -17,7 +17,7 @@ public class VentanaRuleta {
         iniciarComponentes();
     }
     private void iniciarVentanaRuleta() {
-        frame.setVisible(true);
+        frame.setVisible(false); //controlador la muestra
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setLayout(null);
         frame.setSize(800, 600);
@@ -42,6 +42,9 @@ public class VentanaRuleta {
         frame.add(cboTipo);
         frame.add(btnGirar);
         frame.add(txtResultado);
+    }
+    public void mostrar(){
+        frame.setVisible(true); //para que lo llame el controlador
     }
     public JFrame getFrame() { return frame; }
     public JTextField getTxtApuesta() { return txtApuesta; }
