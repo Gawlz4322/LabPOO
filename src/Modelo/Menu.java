@@ -27,7 +27,13 @@ public class Menu {
     }
 
     private void jugarRuleta(){
-        new Ruleta();
+        if (!session.hayUsuario()) {
+            JOptionPane.showMessageDialog(menu.getFrame(), "Debe iniciar sesión para jugar.", "Error", JOptionPane.WARNING_MESSAGE);
+        }
+        Ruleta modeloRuleta = new Ruleta();
+        VentanaRuleta vistaRuleta = new VentanaRuleta();
+        new RuletaController(modeloRuleta, vistaRuleta, session);
+        vistaRuleta.mostrar();
     }
 
     private void historialVentanas(){
