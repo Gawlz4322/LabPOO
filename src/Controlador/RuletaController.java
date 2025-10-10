@@ -2,19 +2,18 @@ package Controlador;
 
 import Modelo.Ruleta;
 import Modelo.TipoApuesta;
-import Modelo.Resultado; // Nuevo
-import Modelo.Usuario;   // Nuevo
+import Modelo.Resultado;
+import Modelo.Usuario;
 import Vista.VentanaRuleta;
 
 import javax.swing.*;
-import java.awt.event.ActionListener;
+import java.util.Objects;
 
 public class RuletaController {
     private final SessionController session;
     private final Ruleta ruleta;
     private final VentanaRuleta ventanaRuleta;
 
-    // Constructor completo
     public RuletaController(Ruleta ruleta, VentanaRuleta vista, SessionController session) {
         this.ruleta = ruleta;
         this.ventanaRuleta = vista;
@@ -30,7 +29,7 @@ public class RuletaController {
     private void actualizarInfoUsuario() {
         Usuario usuario = session.getUsuarioActual();
         if (usuario != null) {
-            // ventanaRuleta.getLblSaldo().setText("Saldo: $" + usuario.getSaldo());
+            ventanaRuleta.getLblSaldo().setText("Saldo: $" + String.format("%.2f", usuario.getSaldo()));
         }
     }
 
