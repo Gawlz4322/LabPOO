@@ -34,8 +34,6 @@ public class VentanaLoginRuleta {
 
         btnIngresar.addActionListener(e -> login());
 
-        mostrarVentana();
-
     }
     public void mostrarVentana(){
         frame.setLocationRelativeTo(null);
@@ -45,22 +43,16 @@ public class VentanaLoginRuleta {
     private void login(){
         String u = txtUsuario.getText();
         String p = new String(txtClave.getPassword());
-        String nombre = validarCredenciales(u, p);
-        if (!nombre.isEmpty()) {
-            JOptionPane.showMessageDialog(frame, "Bienvenido "+ nombre);
-            new Menu();
+        if (session.iniciarSesion(u,p)) {
+            JOptionPane.showMessageDialog(frame, "Bienvenido " + session.getNombreUsuario());
+            frame.dispose();
+            VentanaMenu vistaMenu = new VentanaMenu();
+            new Menu(vistaMenu, session);
+            vistaMenu.mostrar();
         } else{
             JOptionPane.showMessageDialog(frame, "Modelo.Usuario o clave incorrecta", "Error", JOptionPane.ERROR_MESSAGE);
         }
 
-    }
-    private String validarCredenciales(String u, String p){
-        for (Usuario usuarios : USUARIOS){
-            if(usuarios.validarCredenciales(u,p)){
-                return usuarios.getNombre();
-            }
-        }
-        return "";
     }
     public static void main(String[] args) {
         SwingUtilities.invokeLater(VentanaLoginRuleta::new);
