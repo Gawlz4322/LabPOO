@@ -7,9 +7,11 @@ import javax.swing.*;
 
 public class Menu {
     private final VentanaMenu menu;
+    private final SessionController session;
 
-    public Menu(){
-        menu = new VentanaMenu();
+    public Menu(VentanaMenu menu, SessionController session) {
+        this.menu = menu;
+        this.session = session;
         redireccionador();
     }
 
@@ -20,6 +22,7 @@ public class Menu {
     }
 
     private void salirMenu(){
+        session.cerrarSesion();
         menu.getFrame().dispose();
     }
 
