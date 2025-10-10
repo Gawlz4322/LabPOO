@@ -34,12 +34,7 @@ public class Ruleta {
         Scanner input = new Scanner(System.in);
         return input.nextInt();
     }
-    /**
-     * Ejecuta la acción correspondiente a la opción del menú.
-     * @param opcion opción elegida por el usuario.
-     * @param in Scanner para entrada por consola.
-     */
-    public static void ejecutarOpcion(int opcion, Scanner in) {}
+
 
     public static void iniciarRonda(Scanner in) {
         char tipoChar = leerTipoApuesta(in);
