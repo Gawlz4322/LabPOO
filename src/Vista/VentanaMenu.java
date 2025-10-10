@@ -52,6 +52,7 @@ public class VentanaMenu {
         frame.setVisible(true);
     }
 
+
     public JFrame getFrame() { return frame; }
     public JButton getBtnSalir() { return btnSalir; }
     public JButton getBtnJugar() { return btnJugar; }
