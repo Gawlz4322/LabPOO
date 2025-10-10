@@ -1,7 +1,6 @@
 package Vista;
 
 import Controlador.SessionController;
-import Modelo.Menu;
 import javax.swing.*;
 
 public class VentanaLoginRuleta {

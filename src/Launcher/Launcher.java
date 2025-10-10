@@ -5,7 +5,7 @@ import Vista.VentanaLoginRuleta;
 import javax.swing.SwingUtilities;
 
 public class Launcher {
-    public static void main(String[] args) {
+    static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             SessionController session = new SessionController();
             session.registrarUsuario("admin", "1234", "Administrador");
