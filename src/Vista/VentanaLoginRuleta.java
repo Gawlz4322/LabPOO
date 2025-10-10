@@ -2,13 +2,12 @@ package Vista;
 
 import Modelo.Menu;
 import Modelo.Usuario;
-
+import Controlador.SessionController;
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class VentanaLoginRuleta {    public static final List<Usuario> USUARIOS = new ArrayList<>();
-
+public class VentanaLoginRuleta {
     private final JFrame frame = new JFrame("Login - Casino Black Cat");
     private final JLabel lblUsuario = new JLabel("Usuario:");
     private final JTextField txtUsuario = new JTextField();
@@ -17,9 +16,6 @@ public class VentanaLoginRuleta {    public static final List<Usuario> USUARIOS 
     private final JButton btnIngresar = new JButton("Ingresar");
 
     public  VentanaLoginRuleta() {
-        USUARIOS.add(new Usuario("admin", "1234", "Administrador"));
-        USUARIOS.add(new Usuario("Juanin", "abcd", "Juanin Juan Harry"));
-
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(400,400);
         frame.setLayout(null);
