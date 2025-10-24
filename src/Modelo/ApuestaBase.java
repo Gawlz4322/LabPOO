@@ -8,4 +8,12 @@ abstract public class ApuestaBase{
         this.etiqueta = etiqueta;
     }
     public void acierta(int numero, String color){}
+
+    public int getMontoApostado() { return montoApostado; }
+    public String getEtiqueta() { return etiqueta; }
+
+    @Override
+    public String toString(){
+        return etiqueta;
+    }
 }
