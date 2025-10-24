@@ -7,7 +7,7 @@ abstract public class ApuestaBase{
         this.montoApostado = montoApostado;
         this.etiqueta = etiqueta;
     }
-    public void acierta(int numero, String color){}
+    public abstract boolean acierta(int numero, String color);
 
     public int getMontoApostado() { return montoApostado; }
     public String getEtiqueta() { return etiqueta; }
