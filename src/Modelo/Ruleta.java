@@ -1,7 +1,7 @@
 package Modelo;
 
 import java.util.Random;
-import static Modelo.TipoApuesta.*;
+
 
 public class Ruleta {
     public static final int MAX_HISTORIAL = 100;
@@ -17,16 +17,8 @@ public class Ruleta {
         return rng.nextInt(37);
     }
 
-    public boolean evaluarResultado(int numero, TipoApuesta tipo) {
-        if (numero == 0) {
-            return false;
-        }
-        return switch (tipo) {
-            case ROJO -> esRojo(numero);
-            case NEGRO -> !esRojo(numero);
-            case PAR -> numero % 2 == 0;
-            case IMPAR -> numero % 2 != 0;
-        };
+    public boolean evaluarResultado(int numero, ApuestaBase apuesta) {
+
     }
 
     public static boolean esRojo(int n) {
