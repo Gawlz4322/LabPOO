@@ -21,7 +21,6 @@ public class Resultado {
     public boolean isAcierto() { return acierto; }
     public String getTipoApuesta() { return tipoApuesta; }
     public LocalDateTime getFechaHora() { return fechaHora; }
-
     @Override
     public String toString() {
         return "N: " + numeroGanador + ", Apuesta: " + tipoApuesta + ", Monto: $" + montoApostado + (acierto ? " (GANÓ)" : " (PERDIÓ)");
