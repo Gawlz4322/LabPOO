@@ -18,9 +18,20 @@ public class Ruleta {
     }
 
     public boolean evaluarResultado(int numero, ApuestaBase apuesta) {
-
+        String color = colorDe(numero);
+        return apuesta.acierta(numero, color);
     }
-
+    public static String colorDe(int n) {
+        if (n == 0) {
+            return "VERDE";
+        }
+        for (int rojo : NUMEROS_ROJOS){
+            if (rojo == n){
+                return "ROJO";
+            }
+        }
+        return "NEGRO";
+    }
     public static boolean esRojo(int n) {
         if (n == 0){
             return false;
