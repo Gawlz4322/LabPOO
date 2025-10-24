@@ -1,13 +1,13 @@
 package Vista;
 
-import Modelo.TipoApuesta;
 import javax.swing.*;
 import java.awt.*;
 
 public class VentanaRuleta {
     private final JFrame frame = new JFrame("Ruleta - Casino Black Cat");
     private final JTextField txtApuesta = new JTextField();
-    private final JComboBox<TipoApuesta> cboTipo = new JComboBox<>(TipoApuesta.values());
+    private final String [] tiposDeApuesta = {"ROJO","NEGRO","PAR","IMPAR"};
+    private final JComboBox<String> cboTipo = new JComboBox<>(tiposDeApuesta);
     private final JButton btnGirar = new JButton("Girar");
     private final JTextArea txtResultado = new JTextArea();
     private final JLabel lblSaldo = new JLabel("Saldo: $0");
@@ -17,7 +17,7 @@ public class VentanaRuleta {
         iniciarComponentes();
     }
     private void iniciarVentanaRuleta() {
-        frame.setVisible(false); //controlador la muestra
+        frame.setVisible(false);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setLayout(null);
         frame.setSize(800, 600);
@@ -48,7 +48,7 @@ public class VentanaRuleta {
     }
     public JFrame getFrame() { return frame; }
     public JTextField getTxtApuesta() { return txtApuesta; }
-    public JComboBox<TipoApuesta> getCboTipo() { return cboTipo; }
+    public JComboBox<String> getCboTipo() { return cboTipo; }
     public JButton getBtnGirar() { return btnGirar; }
     public JTextArea getTxtResultado() { return txtResultado; }
     public JLabel getLblSaldo() { return lblSaldo; }

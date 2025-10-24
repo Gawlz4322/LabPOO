@@ -9,7 +9,7 @@ public class Estadisticas {
 	public int victorias;
 	public double porcentajeVictorias;
 	public int rachaMaxima;
-	public TipoApuesta tipoMasJugado;
+	public String tipoMasJugado;
     public Estadisticas() {}
 
     public int calcularTotalJugadas(List<Resultado> historial) {
@@ -22,8 +22,8 @@ public class Estadisticas {
                 .count();
     }
 
-    public TipoApuesta calcularTipoMasJugado(List<Resultado> historial) {
-        Map<TipoApuesta, Long> conteo = historial.stream()
+    public String calcularTipoMasJugado(List<Resultado> historial) {
+        Map<String, Long> conteo = historial.stream()
                 .collect(Collectors.groupingBy(
                         Resultado::getTipoApuesta,
                         Collectors.counting()

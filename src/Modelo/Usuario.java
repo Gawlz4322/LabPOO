@@ -21,7 +21,7 @@ public class Usuario {
     public boolean validarCredenciales(String u, String p){
         return this.username.equals(u) && this.password.equals(p);
     }
-    private void actualizarSaldo(int montoApostado, boolean gano){
+    public void actualizarSaldo(int montoApostado, boolean gano){
         if(gano){
             this.saldo += montoApostado * 1;
         }else{

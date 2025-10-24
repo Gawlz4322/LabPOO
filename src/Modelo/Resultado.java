@@ -6,10 +6,10 @@ public class Resultado {
     private final int numeroGanador;
     private final int montoApostado;
     private final boolean acierto;
-    private final TipoApuesta tipoApuesta;
+    private final String tipoApuesta;
     private final LocalDateTime fechaHora;
 
-    public Resultado(int numeroGanador, int montoApostado, boolean acierto, TipoApuesta tipoApuesta) {
+    public Resultado(int numeroGanador, int montoApostado, boolean acierto, String tipoApuesta) {
         this.numeroGanador = numeroGanador;
         this.montoApostado = montoApostado;
         this.acierto = acierto;
@@ -19,7 +19,7 @@ public class Resultado {
     public int getNumeroGanador() { return numeroGanador; }
     public int getMontoApostado() { return montoApostado; }
     public boolean isAcierto() { return acierto; }
-    public TipoApuesta getTipoApuesta() { return tipoApuesta; }
+    public String getTipoApuesta() { return tipoApuesta; }
     public LocalDateTime getFechaHora() { return fechaHora; }
 
     @Override
