@@ -7,4 +7,7 @@ public class CollecionVinilos {
     public CollecionVinilos(){
         collecion = new ArrayList<>();
     }
+    public int getCantidadMax() {
+        return cantidadMax;
+    }
 }
