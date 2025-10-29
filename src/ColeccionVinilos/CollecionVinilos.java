@@ -10,4 +10,7 @@ public class CollecionVinilos {
     public int getCantidadMax() {
         return cantidadMax;
     }
+    public int totalVinilos(){
+        return collecion.size();
+    }
 }
