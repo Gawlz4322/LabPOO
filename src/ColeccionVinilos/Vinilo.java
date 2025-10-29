@@ -9,4 +9,7 @@ public class Vinilo {
         this.album = album;
         this.año = año;
     }
+    public String getArtista() { return artista; }
+    public String getAlbum() { return album; }
+    public int getAño(){return año; }
 }
