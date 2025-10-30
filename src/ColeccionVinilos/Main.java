@@ -21,9 +21,7 @@ public class Main {
 
         String artista = "AC-DC";
         System.out.println("Buscar artista: " + artista);
-        mostrarBusquedaArtista(vinilos, artista);
-
-        buscarArtista(vinilos,artista);
+        coleccion.mostrarBusquedaArtista(artista);
         mostrarColleccion(vinilos);
     }
 }
