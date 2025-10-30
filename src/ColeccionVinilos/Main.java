@@ -19,9 +19,6 @@ public class Main {
         System.out.println("Hay un total de:" + coleccion.totalVinilos() + "vinilos en la colleción.");
         System.out.println("Hay un total de:" + coleccion.espaciosDisponibles()+" espacios disponibles en la colección.");
 
-        mostrarTotal(vinilos);
-        mostrarDisponibles(vinilos);
-
         String artista = "AC-DC";
         System.out.println("Buscar artista: " + artista);
         mostrarBusquedaArtista(vinilos, artista);
