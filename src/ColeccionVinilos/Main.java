@@ -15,9 +15,9 @@ public class Main {
         coleccion.agregarVinilo("Judas Priest", "Defenders of the faith", 1984);
         coleccion.agregarVinilo("Kiss", "Destroyer", 1976);
 
-        System.out.println("Espacio máximo colleción:" + coleccion.getCapacidadMaxima());
-        System.out.println("Hay un total de:" + coleccion.totalVinilos() + "vinilos en la colleción.");
-        System.out.println("Hay un total de:" + coleccion.espaciosDisponibles()+" espacios disponibles en la colección.");
+        System.out.println("Espacio máximo colleción: " + coleccion.getCapacidadMaxima());
+        System.out.println("Hay un total de: " + coleccion.totalVinilos() + " vinilos en la colleción.");
+        System.out.println("Hay un total de: " + coleccion.espaciosDisponibles()+" espacios disponibles en la colección.");
 
         String artista = "AC-DC";
         System.out.println("Buscar artista: " + artista);
