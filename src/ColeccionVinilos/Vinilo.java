@@ -12,4 +12,9 @@ public class Vinilo {
     public String getArtista() { return artista; }
     public String getAlbum() { return album; }
     public int getAño(){return año; }
+
+    @Override
+    public String toString(){
+        return String.format("%-12s - %-25s - %4d", artista,album,año);
+    }
 }
