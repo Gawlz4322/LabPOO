@@ -13,4 +13,7 @@ public class CollecionVinilos {
     public int totalVinilos(){
         return collecion.size();
     }
+    public int espaciosDisponibles(){
+        return capacidadMaxima - collecion.size();
+    }
 }
