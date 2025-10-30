@@ -22,6 +22,13 @@ public class ColecionVinilos {
         }
         return false;
     }
+    public void mostrarBusquedaArtista(String artista){
+        if(buscarArtista(artista)){
+            System.out.println("El artista " + artista + " si está en la colección.");
+        }else{
+            System.out.println("El artista " + artista + " no está en la colección.");
+        }
+    }
     public int getCapacidadMaxima() {
         return capacidadMaxima;
     }
