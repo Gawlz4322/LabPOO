@@ -1,11 +1,11 @@
 package ColeccionVinilos;
 import java.util.ArrayList;
 
-public class ColecionVinilos {
+public class ColeccionVinilos {
     private final int capacidadMaxima = 100;
     private ArrayList<Vinilo> coleccion;
     public ColeccionVinilos() {
-        coleccion = new ArrayList<>();
+        this.coleccion = new ArrayList<>();
     }
     public void agregarVinilo(String artista, String album, int año){
         if (coleccion.size()<capacidadMaxima){

@@ -2,7 +2,7 @@ package ColeccionVinilos;
 
 public class Main {
     public static void main(String[] args) {
-        ColecionVinilos coleccion = new ColecionVinilos();
+        ColeccionVinilos coleccion = new ColeccionVinilos();
 
         coleccion.agregarVinilo("Iron Maiden", "Iron Maiden", 1980);
         coleccion.agregarVinilo("Iron Maiden", "Killers", 1981);
