@@ -29,6 +29,14 @@ public class ColecionVinilos {
             System.out.println("El artista " + artista + " no está en la colección.");
         }
     }
+    public void mostrarColeccion(){
+        System.out.println();
+        int fila = 1;
+        for (Vinilo vinilo : collecion){
+            System.out.println("Fila: " + fila + ": " + vinilo.toString());
+            fila++;
+        }
+    }
     public int getCapacidadMaxima() {
         return capacidadMaxima;
     }
