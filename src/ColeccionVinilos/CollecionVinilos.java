@@ -7,8 +7,12 @@ public class ColecionVinilos {
     public ColeccionVinilos(){
         collecion = new ArrayList<>();
     }
-    public void agregarVinilo(String nombre, String descripcion, int año){
-
+    public void agregarVinilo(String artista, String album, int año){
+        if (collecion.size()<capacidadMaxima){
+            collecion.add(new Vinilo(artista, album, año));
+        }else{
+            System.out.println("No hay espacio.");
+        }
     }
     public int getCapacidadMaxima() {
         return capacidadMaxima;
