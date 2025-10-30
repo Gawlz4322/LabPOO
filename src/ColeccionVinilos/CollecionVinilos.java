@@ -14,6 +14,14 @@ public class ColecionVinilos {
             System.out.println("No hay espacio.");
         }
     }
+    public boolean buscarArtista(String artista){
+        for (Vinilo vinilo : collecion){
+            if (vinilo.getArtista().equals(artista)){
+                return true;
+            }
+        }
+        return false;
+    }
     public int getCapacidadMaxima() {
         return capacidadMaxima;
     }
