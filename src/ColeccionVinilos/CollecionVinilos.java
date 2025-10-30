@@ -7,6 +7,9 @@ public class ColecionVinilos {
     public ColeccionVinilos(){
         collecion = new ArrayList<>();
     }
+    public void agregarVinilo(String nombre, String descripcion, int año){
+
+    }
     public int getCapacidadMaxima() {
         return capacidadMaxima;
     }
