@@ -16,6 +16,7 @@ public class Main {
         agregarVinilo("Kiss", "Destroyer", 1976);
 
         System.out.println("Espacio máximo colleción:" + colleccion.getCapacidadMaxima);
+        System.out.println("Hay un total de:" + collecion.totalVinilos() + "vinilos en la colleción.");
 
         mostrarTotal(vinilos);
         mostrarDisponibles(vinilos);
