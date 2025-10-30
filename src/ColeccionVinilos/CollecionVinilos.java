@@ -1,10 +1,10 @@
 package ColeccionVinilos;
 import java.util.ArrayList;
 
-public class CollecionVinilos {
+public class ColecionVinilos {
     private final int capacidadMaxima = 100;
     private ArrayList<Vinilo> collecion;
-    public CollecionVinilos(){
+    public ColeccionVinilos(){
         collecion = new ArrayList<>();
     }
     public int getCapacidadMaxima() {

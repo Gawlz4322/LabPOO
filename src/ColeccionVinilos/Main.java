@@ -2,7 +2,7 @@ package ColeccionVinilos;
 
 public class Main {
     public static void main(String[] args) {
-        CollecionVinilos collecion = new CollecionVinilos();
+        ColecionVinilos coleccion = new ColecionVinilos();
 
         agregarVinilo("Iron Maiden", "Iron Maiden", 1980);
         agregarVinilo("Iron Maiden", "Killers", 1981);
@@ -15,8 +15,9 @@ public class Main {
         agregarVinilo("Judas Priest", "Defenders of the faith", 1984);
         agregarVinilo("Kiss", "Destroyer", 1976);
 
-        System.out.println("Espacio máximo colleción:" + colleccion.getCapacidadMaxima);
-        System.out.println("Hay un total de:" + collecion.totalVinilos() + "vinilos en la colleción.");
+        System.out.println("Espacio máximo colleción:" + coleccion.getCapacidadMaxima());
+        System.out.println("Hay un total de:" + coleccion.totalVinilos() + "vinilos en la colleción.");
+        System.out.println("Hay un total de:" + coleccion.espaciosDisponibles()+" espacios disponibles en la colección.");
 
         mostrarTotal(vinilos);
         mostrarDisponibles(vinilos);
