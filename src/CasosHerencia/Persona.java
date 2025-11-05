@@ -6,4 +6,7 @@ public class Persona extends SerVivo{
         super(edad);
         this.nombre = nombre;
     }
+    public void vaEscuela(){
+        System.out.println(this.nombre + " va a la escuela.");
+    }
 }
