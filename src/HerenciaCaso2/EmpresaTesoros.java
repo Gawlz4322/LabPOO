@@ -14,5 +14,8 @@ public class EmpresaTesoros extends Empresa {
         this.departamentos.add(new Departamento("Logística"));
         this.departamentos.add(new Departamento("Finanzas"));
     }
+    public Departamento getDepartamento(){
+        return this.departamentos.get(0);
+    }
 
 }
