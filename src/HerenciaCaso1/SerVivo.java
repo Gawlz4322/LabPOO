@@ -1,4 +1,4 @@
-package CasosHerencia;
+package HerenciaCaso1;
 
 public abstract class SerVivo {
     private int edad;

@@ -1,4 +1,4 @@
-package CasosHerencia;
+package HerenciaCaso1;
 
 public class Persona extends SerVivo{
     private String nombre;
