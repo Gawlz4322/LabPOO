@@ -1,4 +1,5 @@
 package CasosHerencia;
 
-public class Animal {
+public class Animal extends SerVivo{
+
 }
