@@ -8,4 +8,7 @@ public class Perro extends Animal{
     public void ladrar(){
         System.out.println(getNombre() + "Guau guau guau.");
     }
+    public void comer(){
+        super.comer();
+    }
 }
