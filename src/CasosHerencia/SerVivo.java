@@ -5,4 +5,8 @@ public abstract class SerVivo {
     public SerVivo(int edad) {
         this.edad = edad;
     }
+    public int getEdad() {
+        return edad;
+    }
+
 }
