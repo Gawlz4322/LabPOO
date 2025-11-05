@@ -10,4 +10,11 @@ public class Departamento {
         this.nombre = nombre;
         this.grupos = new ArrayList<>();
     }
+    public String getNombre() {
+        return nombre;
+
+    }
+    public List<GrupoProyecto> getGrupos() {
+        return grupos;
+    }
 }
