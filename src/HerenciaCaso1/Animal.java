@@ -1,8 +1,11 @@
 package HerenciaCaso1;
 
+import java.util.List;
+
 public class Animal extends SerVivo{
     private String nombre;
     private String color;
+    private List<Persona> dueños;
     public Animal(String nombre, String color, int edad) {
         super(edad);
         this.nombre = nombre;
@@ -19,5 +22,10 @@ public class Animal extends SerVivo{
     }
     public void morder(){
         System.out.println(getNombre() + " muerde.");
+    }
+    public void asignarDueño(Persona dueño){
+        if (!this.dueños.contains(dueño)){
+            this.dueños.add(dueño);
+        }
     }
 }
