@@ -9,4 +9,7 @@ public class Persona extends SerVivo{
     public void vaEscuela(){
         System.out.println(this.nombre + " va a la escuela.");
     }
+    public void decirEdad(){
+        System.out.println(this.nombre + " tiene " + getEdad() + " años.");
+    }
 }
