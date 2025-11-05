@@ -14,4 +14,10 @@ public class Animal extends SerVivo{
     public String getColor() {
         return color;
     }
+    public void comer(){
+        System.out.println(getNombre() + " come.");
+    }
+    public void morder(){
+        System.out.println(getNombre() + " muerde.");
+    }
 }
