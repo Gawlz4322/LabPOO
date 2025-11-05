@@ -10,4 +10,7 @@ public class Casa {
         this.direccion = direccion;
         this.arrendatarios = new ArrayList<>();
     }
+    public void agregarArrendatario(Persona persona){
+        this.arrendatarios.add(persona);
+    }
 }
