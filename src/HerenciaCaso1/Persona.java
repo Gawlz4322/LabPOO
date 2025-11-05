@@ -17,6 +17,6 @@ public class Persona extends SerVivo{
     }
     public void agregarMascotas(Animal mascota){
         this.mascotas.add(mascota);
-        mascota.asignarDueño(this);
+        mascota.asignarDueno(this);
     }
 }

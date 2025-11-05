@@ -4,7 +4,7 @@ public class Gato extends Animal{
     public Gato(String nombre, String color, int edad) {
         super(nombre, color, edad);
     }
-    public void rasguñar(){
+    public void rasgunar(){
         System.out.println(getNombre()+ " rasguña.");
     }
     public void morder(){
