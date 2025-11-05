@@ -7,4 +7,7 @@ public class Gato extends Animal{
     public void rasguñar(){
         System.out.println(getNombre()+ " rasguña.");
     }
+    public void morder(){
+        super.morder();
+    }
 }
