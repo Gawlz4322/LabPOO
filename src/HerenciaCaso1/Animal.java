@@ -8,4 +8,10 @@ public class Animal extends SerVivo{
         this.nombre = nombre;
         this.color = color;
     }
+    public String getNombre() {
+        return nombre;
+    }
+    public String getColor() {
+        return color;
+    }
 }
