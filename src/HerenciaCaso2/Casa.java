@@ -6,7 +6,7 @@ import java.util.List;
 public class Casa {
     private String direccion;
     private List<Persona> arrendatarios;
-    public Casa(String direccion, List<Persona> arrendatarios) {
+    public Casa(String direccion) {
         this.direccion = direccion;
         this.arrendatarios = new ArrayList<>();
     }
