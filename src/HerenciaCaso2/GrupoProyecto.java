@@ -10,4 +10,11 @@ public class GrupoProyecto {
         this.nombre = nombre;
         this.miembros = new ArrayList<>();
     }
+    public void agregarMiembro(Empleado empleado) {
+        if (miembros.size() < 5) {
+            this.miembros.add(empleado);
+            System.out.println(empleado.getNombre() + " asignado a " + nombre);
+        } else {
+            System.out.println("Grupo de proyecto lleno.");
+        }
 }
