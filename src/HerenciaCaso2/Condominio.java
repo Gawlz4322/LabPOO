@@ -13,4 +13,10 @@ public class Condominio {
             this.casas.add(new Casa("Calle Sol " + i));
         }
     }
+    public Casa getCasa(int index) {
+        if (index > 0 && index <= casas.size()) {
+            return casas.get(index - 1);
+        }
+        return null;
+    }
 }
