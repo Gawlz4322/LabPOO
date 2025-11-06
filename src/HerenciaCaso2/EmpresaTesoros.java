@@ -14,7 +14,7 @@ public class EmpresaTesoros extends Empresa {
         this.departamentos.add(new Departamento("Logística"));
         this.departamentos.add(new Departamento("Finanzas"));
     }
-    public Departamento getDepartamento(){
+    public Departamento getDepartamento(String nombre){
         return this.departamentos.get(0);
     }
 
