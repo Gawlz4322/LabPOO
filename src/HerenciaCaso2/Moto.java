@@ -7,4 +7,7 @@ public class Moto extends Vehiculo {
     public String getModelo(){
         return super.modelo;
     }
+    public void sonarMotor(){
+        System.out.println("La " + getModelo() + " esta sonando");
+    }
 }
