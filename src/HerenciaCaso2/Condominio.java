@@ -6,7 +6,7 @@ import java.util.List;
 public class Condominio {
     private String nombre;
     private List<Casa> casas;
-    public Condominio(String nombre, List<Casa> casas) {
+    public Condominio(String nombre) {
         this.nombre = nombre;
         this.casas = new ArrayList<>();
         for (int i = 1; i <= 20; i++){
