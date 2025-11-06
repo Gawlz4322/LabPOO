@@ -7,4 +7,7 @@ public class Vehiculo {
         this.marca = marca;
         this.modelo = modelo;
     }
+    public void arrancar() {
+        System.out.println("El " + marca + " " + modelo + " ha arrancado.");
+    }
 }
