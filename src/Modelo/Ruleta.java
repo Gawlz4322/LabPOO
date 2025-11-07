@@ -42,13 +42,11 @@ public class Ruleta {
         return false;
     }
 
-    public void registrarResultado(int numero, int apuesta, boolean acierto) {
-        if (historialSize < MAX_HISTORIAL) {
-            historialNumeros[historialSize] = numero;
-            historialApuestas[historialSize] = apuesta;
-            historialAciertos[historialSize] = acierto;
-            historialSize++;
-        }
+    public void registrarResultado(int numero, ApuestaBase apuesta, boolean acierto) {
+        // Se crea el objeto Resultado
+        Resultado resultado = new Resultado(numero, apuesta.getMontoApostado(), acierto, apuesta.getEtiqueta());
+        // Se delega el guardado al repositorio inyectado
+        repositorio.guardarResultados(resultado);
     }
     public int getHistorialSize() {
         return historialSize;

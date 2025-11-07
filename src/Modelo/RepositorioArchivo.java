@@ -45,7 +45,7 @@ public class RepositorioArchivo implements  IRepositorioResultados {
                         boolean acierto = Boolean.parseBoolean(partes[2]);
                         String tipo = partes[3];
                         LocalDateTime fechaHora = LocalDateTime.parse(partes[4]);
-                        Resultado resultado = new Resultado(num, monto, acierto, tipo, fechaHora);
+                        Resultado resultado = new Resultado(num, monto, acierto, tipo);
                         historial.add(resultado);
                     } catch (Exception e) {
                         System.err.println("Error al parsear línea de historial: " + linea + " | Error: " + e.getMessage());

@@ -67,7 +67,7 @@ public class RuletaController {
             }
             int numeroGanador = ruleta.girarRuleta();
             boolean acierto = ruleta.evaluarResultado(numeroGanador, apuesta);
-            Resultado resultado = new Resultado(numeroGanador, monto, acierto, apuesta.getEtiqueta(), fechaHora);
+            Resultado resultado = new Resultado(numeroGanador, monto, acierto, apuesta.getEtiqueta());
             ruleta.registrarResultado(numeroGanador, monto, acierto);
             usuario.agregarResultado(resultado);
             usuario.actualizarSaldo(monto, acierto);
