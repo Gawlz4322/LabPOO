@@ -41,23 +41,12 @@ public class Ruleta {
         }
         return false;
     }
+    public List<Resultado> obtenerHistorial() {
+        return repositorio.obtenerHistorial();
+    }
 
     public void registrarResultado(int numero, ApuestaBase apuesta, boolean acierto) {
-        // Se crea el objeto Resultado
         Resultado resultado = new Resultado(numero, apuesta.getMontoApostado(), acierto, apuesta.getEtiqueta());
-        // Se delega el guardado al repositorio inyectado
         repositorio.guardarResultados(resultado);
-    }
-    public int getHistorialSize() {
-        return historialSize;
-    }
-    public int[] getHistorialNumeros() {
-        return historialNumeros;
-    }
-    public int[] getHistorialApuestas() {
-        return historialApuestas;
-    }
-    public boolean[] getHistorialAciertos() {
-        return historialAciertos;
     }
 }
