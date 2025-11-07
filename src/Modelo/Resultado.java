@@ -9,7 +9,7 @@ public class Resultado {
     private final String tipoApuesta;
     private final LocalDateTime fechaHora;
 
-    public Resultado(int numeroGanador, int montoApostado, boolean acierto, String tipoApuesta) {
+    public Resultado(int numeroGanador, int montoApostado, boolean acierto, String tipoApuesta, LocalDateTime fechaHora) {
         this.numeroGanador = numeroGanador;
         this.montoApostado = montoApostado;
         this.acierto = acierto;
