@@ -1,8 +1,10 @@
 package Modelo;
 
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class RepositorioArchivo implements  IRepositorioResultados {
@@ -27,6 +29,11 @@ public class RepositorioArchivo implements  IRepositorioResultados {
 
     @Override
     public List<Resultado> obtenerHistorial() {
-        return List.of();
+        List<Resultado> historial = new ArrayList<>();
+        File archivo = new File(NOMBRE_ARCHIVO);
+
+        if (!archivo.exists()) {
+            return historial;
+        }
     }
 }
