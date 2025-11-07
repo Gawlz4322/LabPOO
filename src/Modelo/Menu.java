@@ -33,7 +33,7 @@ public class Menu {
         if (!session.hayUsuario()) {
             JOptionPane.showMessageDialog(menu.getFrame(), "Debe iniciar sesión para jugar.", "Error", JOptionPane.WARNING_MESSAGE);
         }
-        IRepositorioResultados repo = new RepositorioArchivo();
+        IRepositorioResultados repo = new RepositorioEnMemoria();
         Ruleta modeloRuleta = new Ruleta(repo);
         VentanaRuleta vistaRuleta = new VentanaRuleta();
         new RuletaController(modeloRuleta, vistaRuleta, session);
