@@ -4,6 +4,9 @@ import Controlador.SessionController;
 import Vista.VentanaMenu;
 import Vista.VentanaRuleta;
 import javax.swing.*;
+import Modelo.IRepositorioResultados;
+import Modelo.RepositorioEnMemoria;
+import Modelo.RepositorioArchivo;
 
 public class Menu {
     private final VentanaMenu menu;
@@ -31,7 +34,7 @@ public class Menu {
             JOptionPane.showMessageDialog(menu.getFrame(), "Debe iniciar sesión para jugar.", "Error", JOptionPane.WARNING_MESSAGE);
         }
         IRepositorioResultados repo = new RepositorioArchivo();
-        Ruleta modeloRuleta = new VentanaRuleta(repo);
+        Ruleta modeloRuleta = new Ruleta(repo);
         VentanaRuleta vistaRuleta = new VentanaRuleta();
         new RuletaController(modeloRuleta, vistaRuleta, session);
         vistaRuleta.mostrar();
