@@ -1,17 +1,15 @@
 package Modelo;
 
 import java.util.Random;
-
+import java.util.List;
 
 public class Ruleta {
-    public static final int MAX_HISTORIAL = 100;
-    private static final int[] NUMEROS_ROJOS =
-            {1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36};
-    private final int[] historialNumeros = new int[MAX_HISTORIAL];
-    private final int[] historialApuestas = new int[MAX_HISTORIAL];
-    private final boolean[] historialAciertos = new boolean[MAX_HISTORIAL];
-    private int historialSize = 0;
+    private final IRepositorioResultados repositorio;
     private final Random rng = new Random();
+
+    public Ruleta(IRepositorioResultados repositorio) {
+        this.repositorio = repositorio;
+    }
 
     public int girarRuleta() {
         return rng.nextInt(37);
