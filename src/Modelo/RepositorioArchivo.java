@@ -1,7 +1,18 @@
 package Modelo;
 
-public class RepositorioArchivo {
+import java.util.List;
 
-	private string nombreArchivo;
+public class RepositorioArchivo implements  IRepositorioResultados {
 
+	private static final String NOMBRE_ARCHIVO = "historial_ruleta.csv";
+
+    @Override
+    public void guardarResultados(Resultado resultado) {
+
+    }
+
+    @Override
+    public List<Resultado> obtenerHistorial() {
+        return List.of();
+    }
 }
