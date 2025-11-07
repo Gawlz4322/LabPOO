@@ -39,7 +39,6 @@ public class Menu {
         new RuletaController(modeloRuleta, vistaRuleta, session);
         vistaRuleta.mostrar();
     }
-
     private void historialVentanas(){
         JOptionPane.showMessageDialog(menu.getFrame(), "Funcionalidad aún no implementada");
     }
