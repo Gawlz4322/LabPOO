@@ -1,8 +1,10 @@
 package Modelo;
 
+import java.util.List;
+
 public interface IRepositorioResultados {
 
-	void guardarResultados();
+	void guardarResultados(Resultado resultado);
 
 	List<Resultado> obtenerHistorial();
 
