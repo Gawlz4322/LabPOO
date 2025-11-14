@@ -8,11 +8,12 @@ import Modelo.IRepositorioResultados;
 import Modelo.Resultado;
 import Vista.VentanaHistorial;
 import java.util.List;
+import javax.swing.JOptionPane;
 
 public class Menu {
     private final VentanaMenu menu;
     private final SessionController session;
-    private final IRepositorioResultados repositorio = new RepositorioEnMemoria();
+    private final IRepositorioResultados repositorio;
 
     public Menu(VentanaMenu menu, SessionController session, IRepositorioResultados repositorio) {
         this.menu = menu;
@@ -25,6 +26,30 @@ public class Menu {
         menu.getBtnSalir().addActionListener(e -> salirMenu());
         menu.getBtnHistorial().addActionListener(e -> historialVentanas());
         menu.getBtnJugar().addActionListener(e -> jugarRuleta());
+        menu.getBtnInicio().addActionListener(e -> mostrarEstadisticas());
+    }
+    private void mostrarEstadisticas() {
+        Estadisticas stats = new Estadisticas(repositorio);
+        int totalJugadas = stats.calcularTotalJugadas();
+        int victorias = stats.calcularVictorias();
+        double porcentaje = stats.calcularPorcentajeVictorias();
+        String masJugado = stats.calcularTipoMasJugado();
+        int rachaMax = stats.calcularRachaMaxima();
+
+        StringBuilder sb = new StringBuilder();
+        sb.append("--- Estadísticas Generales ---\n\n");
+        sb.append(String.format("Total de Jugadas: %d\n", totalJugadas));
+        sb.append(String.format("Victorias: %d\n", victorias));
+        sb.append(String.format("Porcentaje de Victorias: %.2f%%\n", porcentaje));
+        sb.append(String.format("Tipo de Apuesta Más Jugado: %s\n", masJugado));
+        sb.append(String.format("Racha de Victorias Máxima: %d\n", rachaMax));
+
+        JOptionPane.showMessageDialog(
+                menu.getFrame(),
+                sb.toString(),
+                "Estadísticas del Casino",
+                JOptionPane.INFORMATION_MESSAGE
+        );
     }
 
     private void salirMenu(){
