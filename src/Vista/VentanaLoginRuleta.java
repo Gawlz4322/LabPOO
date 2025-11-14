@@ -52,7 +52,7 @@ public class VentanaLoginRuleta {
             frame.dispose();
             VentanaMenu vistaMenu = new VentanaMenu();
             new Menu(vistaMenu, session, repositorio);
-            vistaMenu.mostrar(session.getNombreUsuario());
+            vistaMenu.mostrarMenu(session.getNombreUsuario());
         } else{
             JOptionPane.showMessageDialog(frame, "Modelo.Usuario o clave incorrecta", "Error", JOptionPane.ERROR_MESSAGE);
         }

@@ -43,10 +43,10 @@ public class VentanaMenu {
         lblExplicacionCuerpo.setLineWrap(true);
         lblExplicacionCuerpo.setWrapStyleWord(true);
 
-        mostrarMenu();
+        mostrarMenu(session.getNombreUsuario());
     }
 
-    public void mostrarMenu() {
+    public void mostrarMenu(String nombreUsuario) {
         frame.setLocationRelativeTo(null);
         frame.setResizable(false);
         frame.setVisible(true);
@@ -57,4 +57,5 @@ public class VentanaMenu {
     public JButton getBtnSalir() { return btnSalir; }
     public JButton getBtnJugar() { return btnJugar; }
     public JButton getBtnHistorial() { return btnHistorial; }
+    public JButton getBtnInicio() { return btnInicio;}
 }
