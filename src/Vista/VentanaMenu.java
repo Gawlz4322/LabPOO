@@ -42,8 +42,6 @@ public class VentanaMenu {
         lblExplicacionCuerpo.setOpaque(false);
         lblExplicacionCuerpo.setLineWrap(true);
         lblExplicacionCuerpo.setWrapStyleWord(true);
-
-        mostrarMenu(session.getNombreUsuario());
     }
 
     public void mostrarMenu(String nombreUsuario) {
