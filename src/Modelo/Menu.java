@@ -1,6 +1,5 @@
 package Modelo;
-import Controlador.RuletaController;
-import Controlador.SessionController;
+import Controlador.*;
 import Vista.VentanaMenu;
 import Vista.VentanaRuleta;
 import javax.swing.*;
@@ -67,8 +66,7 @@ public class Menu {
         vistaRuleta.mostrar();
     }
     private void historialVentanas(){
-        List<Resultado> historial = repositorio.obtenerHistorial();
         VentanaHistorial vistaHistorial = new VentanaHistorial();
-        vistaHistorial.mostrarHistorial(historial);
+        new ResultadoController(vistaHistorial, repositorio);
     }
 }
