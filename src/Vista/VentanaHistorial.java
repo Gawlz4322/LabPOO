@@ -21,4 +21,17 @@ public class VentanaHistorial {
         JScrollPane scrollPane = new JScrollPane(txtHistorial);
         frame.add(scrollPane, BorderLayout.CENTER);
     }
+    public void mostrarHistorial(List<Resultado> historial) {
+        if (historial == null || historial.isEmpty()) {
+            txtHistorial.setText("No hay jugadas en el historial.");
+        } else {
+            StringBuilder sb = new StringBuilder();
+            sb.append("--- Historial de Jugadas ---\n\n");
+            for (Resultado r : historial) {
+                sb.append(r.toString()).append("\n");
+            }
+            txtHistorial.setText(sb.toString());
+        }
+        frame.setVisible(true);
+    }
 }
