@@ -45,8 +45,7 @@ public class Ruleta {
         return repositorio.obtenerHistorial();
     }
 
-    public void registrarResultado(int numero, ApuestaBase apuesta, boolean acierto) {
-        Resultado resultado = new Resultado(numero, apuesta.getMontoApostado(), acierto, apuesta.getEtiqueta());
+    public void registrarResultado(Resultado resultado) {
         repositorio.guardarResultados(resultado);
     }
 }
