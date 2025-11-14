@@ -2,9 +2,13 @@ package Vista;
 
 import Controlador.SessionController;
 import javax.swing.*;
+import Modelo.IRepositorioResultados;
+import Modelo.Menu;
+import Vista.VentanaMenu;
 
 public class VentanaLoginRuleta {
     private final SessionController session;
+    private final IRepositorioResultados repositorio;
 
     private final JFrame frame = new JFrame("Login - Casino Black Cat");
     private final JLabel lblUsuario = new JLabel("Usuario:");
@@ -13,8 +17,9 @@ public class VentanaLoginRuleta {
     private final JPasswordField txtClave = new JPasswordField();
     private final JButton btnIngresar = new JButton("Ingresar");
 
-    public  VentanaLoginRuleta(SessionController session) {
+    public  VentanaLoginRuleta(SessionController session, IRepositorioResultados repositorio) {
         this.session = session;
+        this.repositorio = repositorio;
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(400,400);
         frame.setLayout(null);
@@ -46,8 +51,8 @@ public class VentanaLoginRuleta {
             JOptionPane.showMessageDialog(frame, "Bienvenido " + session.getNombreUsuario());
             frame.dispose();
             VentanaMenu vistaMenu = new VentanaMenu();
-            new Modelo.Menu(vistaMenu, session);
-            vistaMenu.mostrarMenu();
+            new Menu(vistaMenu, session, repositorio);
+            vistaMenu.mostrar(session.getNombreUsuario());
         } else{
             JOptionPane.showMessageDialog(frame, "Modelo.Usuario o clave incorrecta", "Error", JOptionPane.ERROR_MESSAGE);
         }
