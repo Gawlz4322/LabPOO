@@ -7,6 +7,9 @@ import javax.swing.*;
 import Modelo.IRepositorioResultados;
 import Modelo.RepositorioEnMemoria;
 import Modelo.RepositorioArchivo;
+import Modelo.Resultado;
+import Vista.VentanaHistorial;
+import java.util.List;
 
 public class Menu {
     private final VentanaMenu menu;
@@ -40,6 +43,8 @@ public class Menu {
         vistaRuleta.mostrar();
     }
     private void historialVentanas(){
-        JOptionPane.showMessageDialog(menu.getFrame(), "Funcionalidad aún no implementada");
+        List<Resultado> historial = repo.obtenerHistorial();
+        VentanaHistorial vistaHistorial = new VentanaHistorial();
+        vistaHistorial.mostrarHistorial(historial);
     }
 }
