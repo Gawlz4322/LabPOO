@@ -17,4 +17,5 @@ public class GrupoProyecto {
         } else {
             System.out.println("Grupo de proyecto lleno.");
         }
+    }
 }
