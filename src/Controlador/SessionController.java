@@ -2,6 +2,7 @@ package Controlador;
 
 import Modelo.Usuario;
 
+
 public class SessionController {
     private Usuario usuarioActual;
     public void registrarUsuario(String u, String p, String n) {

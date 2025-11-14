@@ -79,7 +79,7 @@ public class RuletaController {
 
     private void mostrarResultado(int numero, String tipo, int monto, boolean acierto) {
         String color = Ruleta.esRojo(numero) ? "Rojo" : (numero == 0 ? "Verde (0)" : "Negro");
-        String texto = String.format("--- Ronda #%d ---\n", session.getUsuarioActual().getHistorial().size());
+        String texto = String.format("--- Ronda #%d ---\\n", ruleta.obtenerHistorial().size());
         texto += String.format("Número ganador: %d (%s)\n", numero, color);
         texto += String.format("Apuesta: %s (Monto: $%d)\n", tipo, monto);
         texto += acierto ? "¡¡¡GANASTE!!!" : "PERDISTE.";
