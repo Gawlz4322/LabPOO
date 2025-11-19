@@ -26,4 +26,10 @@ class ApuestasTest {
         assertFalse(apuesta.acierta(1, "ROJO"), "1 es impar, debería perder");
         assertFalse(apuesta.acierta(0, "VERDE"), "El 0 no paga par en la ruleta");
     }
+    @Test
+    void testApuestaImpar() {
+        ApuestaImpar apuesta = new ApuestaImpar(100);
+        assertTrue(apuesta.acierta(1, "ROJO"), "1 es impar, debería ganar");
+        assertFalse(apuesta.acierta(2, "NEGRO"), "2 es par, debería perder");
+    }
 }
