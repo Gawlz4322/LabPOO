@@ -12,4 +12,11 @@ class ApuestasTest {
         assertTrue(apuesta.acierta(1, "ROJO"), "Debería acertar si sale rojo");
         assertFalse(apuesta.acierta(2, "NEGRO"), "Debería fallar si sale negro");
         assertFalse(apuesta.acierta(0, "VERDE"), "El 0 es verde por ende debe de perder");
+    }
+    @Test
+    void testApuestaNegro() {
+        ApuestaNegro apuesta = new ApuestaNegro(100);
+        assertTrue(apuesta.acierta(2, "NEGRO"), "Debería acertar si sale Negro");
+        assertFalse(apuesta.acierta(1, "ROJO"), "Debería fallar si sale Rojo");
+    }
 }
