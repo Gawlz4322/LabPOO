@@ -19,4 +19,11 @@ class ApuestasTest {
         assertTrue(apuesta.acierta(2, "NEGRO"), "Debería acertar si sale Negro");
         assertFalse(apuesta.acierta(1, "ROJO"), "Debería fallar si sale Rojo");
     }
+    @Test
+    void testApuestaPar() {
+        ApuestaPar apuesta = new ApuestaPar(100);
+        assertTrue(apuesta.acierta(2, "NEGRO"), "2 es par, debería ganar");
+        assertFalse(apuesta.acierta(1, "ROJO"), "1 es impar, debería perder");
+        assertFalse(apuesta.acierta(0, "VERDE"), "El 0 no paga par en la ruleta");
+    }
 }
