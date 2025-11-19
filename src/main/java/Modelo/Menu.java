@@ -2,11 +2,8 @@ package Modelo;
 import Controlador.*;
 import Vista.VentanaMenu;
 import Vista.VentanaRuleta;
-import javax.swing.*;
-import Modelo.IRepositorioResultados;
-import Modelo.Resultado;
 import Vista.VentanaHistorial;
-import java.util.List;
+
 import javax.swing.JOptionPane;
 
 public class Menu {

@@ -4,7 +4,6 @@ import Controlador.SessionController;
 import javax.swing.*;
 import Modelo.IRepositorioResultados;
 import Modelo.Menu;
-import Vista.VentanaMenu;
 
 public class VentanaLoginRuleta {
     private final SessionController session;

@@ -5,7 +5,6 @@ import Vista.VentanaLoginRuleta;
 import javax.swing.SwingUtilities;
 import Modelo.IRepositorioResultados;
 import Modelo.RepositorioEnMemoria;
-import Modelo.RepositorioArchivo;
 
 public class Launcher {
     static void main(String[] args) {
