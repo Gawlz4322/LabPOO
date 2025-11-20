@@ -25,8 +25,11 @@ public class Usuario {
     }
     public void actualizarSaldo(int montoApostado, boolean gano){
         if(gano){
-            this.saldo += montoApostado * 1;
-        }else{
+            this.saldo += montoApostado;
+        } else {
+            if (saldo < montoApostado) {
+                throw new IllegalArgumentException("Saldo insuficiente");
+            }
             this.saldo -= montoApostado;
         }
     }
