@@ -15,4 +15,15 @@ class SessionControllerTest {
         assertFalse(resultado, "El login debería fallar para usuarios inexistentes");
         assertFalse(session.hayUsuario(), "No debería haber usuario en sesión");
     }
+    @Test
+    void testManejoDeNulos() {
+        SessionController session = new SessionController();
+
+        boolean resultadoLogin = session.iniciarSesion(null, "123");
+        assertFalse(resultadoLogin, "Login con username null debe retornar false");
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            session.registrarUsuario(null, "123", "Fantasma");
+        }, "Registrar username null debe lanzar excepción");
+    }
 }
