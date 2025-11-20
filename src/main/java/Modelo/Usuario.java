@@ -23,6 +23,13 @@ public class Usuario {
         if (u == null) return false;
         return this.username.equals(u) && this.password.equals(p);
     }
+    public void cargarSaldo(double monto) {
+        if (monto <= 0) {
+            throw new IllegalArgumentException("El monto debe ser positivo");
+        }
+        this.saldo += monto;
+    }
+
     public void actualizarSaldo(int montoApostado, boolean gano){
         if(gano){
             this.saldo += montoApostado;
