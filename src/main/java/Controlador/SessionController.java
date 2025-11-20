@@ -8,13 +8,14 @@ public class SessionController {
     private Map<String, Usuario> usuariosRegistrados = new HashMap<>();
     private Usuario usuarioActual;
     public void registrarUsuario(String u, String p, String n) {
-        if (u == null || u.isBlank() || p == null || p.isBlank() || n == null || n.
-                isBlank())
+        if (u == null || u.isBlank() || p == null || p.isBlank() || n == null || n.isBlank())
             throw new IllegalArgumentException("Datos requeridos");
-        Usuario nuevoUsuario = new Usuario(u, p, n);
+
+        Usuario nuevoUsuario = new Usuario(u, p, n, 1000.0);
         this.usuariosRegistrados.put(u, nuevoUsuario);
     }
     public boolean iniciarSesion(String u, String p) {
+        if (u == null) return false;
         Usuario usuario = usuariosRegistrados.get(u);
         if (usuario != null && usuario.validarCredenciales(u, p)) {
             this.usuarioActual = usuario;

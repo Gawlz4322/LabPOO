@@ -7,13 +7,20 @@ public class Usuario {
     private String nombre;
     private String invitado;
 
-    public Usuario(String username, String password, String nombre) {
+    public Usuario(String username, String password, String nombre, double saldoInicial) {
+        if (username == null) {
+            throw new IllegalArgumentException("Username no puede ser nulo");
+        }
+        if (saldoInicial < 0) {
+            throw new IllegalArgumentException("Saldo inicial inválido");
+        }
         this.username = username;
         this.password = password;
         this.nombre = nombre;
-        this.saldo = 1000.0;
+        this.saldo = saldoInicial;
     }
     public boolean validarCredenciales(String u, String p){
+        if (u == null) return false;
         return this.username.equals(u) && this.password.equals(p);
     }
     public void actualizarSaldo(int montoApostado, boolean gano){

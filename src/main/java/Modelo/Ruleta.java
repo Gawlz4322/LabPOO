@@ -20,6 +20,9 @@ public class Ruleta {
     }
 
     public boolean evaluarResultado(int numero, ApuestaBase apuesta) {
+        if (apuesta == null) {
+            throw new IllegalArgumentException("Apuesta requerida");
+        }
         String color = colorDe(numero);
         return apuesta.acierta(numero, color);
     }
