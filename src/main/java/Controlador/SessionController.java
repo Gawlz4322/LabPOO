@@ -10,6 +10,9 @@ public class SessionController {
     public void registrarUsuario(String u, String p, String n) {
         if (u == null || u.isBlank() || p == null || p.isBlank() || n == null || n.isBlank())
             throw new IllegalArgumentException("Datos requeridos");
+        if (usuariosRegistrados.containsKey(u)) {
+            throw new IllegalArgumentException("El usuario '" + u + "' ya está registrado.");
+        }
 
         Usuario nuevoUsuario = new Usuario(u, p, n, 1000.0);
         this.usuariosRegistrados.put(u, nuevoUsuario);
