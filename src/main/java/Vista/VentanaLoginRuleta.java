@@ -4,6 +4,7 @@ import Controlador.SessionController;
 import javax.swing.*;
 import Modelo.IRepositorioResultados;
 import Modelo.Menu;
+import Controlador.RegistroController;
 
 public class VentanaLoginRuleta {
     private final SessionController session;
@@ -15,6 +16,7 @@ public class VentanaLoginRuleta {
     private final JLabel lblClave = new JLabel("Clave:");
     private final JPasswordField txtClave = new JPasswordField();
     private final JButton btnIngresar = new JButton("Ingresar");
+    private final JButton btnRegistrar = new JButton("Registrar");
 
     public  VentanaLoginRuleta(SessionController session, IRepositorioResultados repositorio) {
         this.session = session;
@@ -28,15 +30,17 @@ public class VentanaLoginRuleta {
         frame.add(lblClave);
         frame.add(txtClave);
         frame.add(btnIngresar);
+        frame.add(btnRegistrar);
 
         lblUsuario.setBounds(50, 80,300,25);
         txtUsuario.setBounds(50, 120,300,25);
         lblClave.setBounds(50, 160,300,25);
         txtClave.setBounds(50, 200,300,25);
         btnIngresar.setBounds(50, 240,300,25);
+        btnRegistrar.setBounds(50, 280,300,25);
 
         btnIngresar.addActionListener(e -> login());
-
+        btnRegistrar.addActionListener(e -> abrirRegistro());
     }
     public void mostrarVentana(){
         frame.setLocationRelativeTo(null);
@@ -55,6 +59,10 @@ public class VentanaLoginRuleta {
         } else{
             JOptionPane.showMessageDialog(frame, "Usuario o clave incorrecta", "Error", JOptionPane.ERROR_MESSAGE);
         }
-
+    }
+    private void abrirRegistro() {
+        VentanaRegistro vRegistro = new VentanaRegistro();
+        new RegistroController(vRegistro, session);
+        vRegistro.mostrar();
     }
 }
