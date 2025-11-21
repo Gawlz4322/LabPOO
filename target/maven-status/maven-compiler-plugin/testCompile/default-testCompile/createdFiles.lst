@@ -1,2 +1,5 @@
+Controlador\SessionControllerTest.class
 Modelo\ApuestasTest.class
+Modelo\RuletaTest.class
 Modelo\UsuarioTest.class
+Modelo\EstadisticasTest.class

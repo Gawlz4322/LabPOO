@@ -10,6 +10,7 @@ Vista\VentanaHistorial.class
 Modelo\Resultado.class
 Modelo\ApuestaRojo.class
 Controlador\ResultadoController.class
+Controlador\RegistroController.class
 Controlador\SessionController.class
 Vista\VentanaRegistro.class
 Modelo\ApuestaNegro.class
