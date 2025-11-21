@@ -14,5 +14,17 @@ public class RegistroController {
         vista.getBtnRegistrar().addActionListener(e -> registrar());
         vista.getBtnCancelar().addActionListener(e -> vista.cerrar());
     }
-    private void registrar() {}
+    private void registrar() {
+        try {
+            String nombre = vista.getNombre();
+            String usuario = vista.getUsuario();
+            String clave = vista.getClave();
+            session.registrarUsuario(usuario, clave, nombre);
+
+            JOptionPane.showMessageDialog(vista.getFrame(), "¡Usuario registrado con éxito!", "Registro", JOptionPane.INFORMATION_MESSAGE);
+            vista.cerrar();
+        } catch (IllegalArgumentException ex) {
+            JOptionPane.showMessageDialog(vista.getFrame(), ex.getMessage(), "Error de Registro", JOptionPane.ERROR_MESSAGE);
+        }
+    }
 }
