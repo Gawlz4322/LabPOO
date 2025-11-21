@@ -9,6 +9,7 @@ public class RegistroController {
     public RegistroController(VentanaRegistro vista, SessionController session) {
         this.vista = vista;
         this.session = session;
+        initController();
     }
     private void initController() {
         vista.getBtnRegistrar().addActionListener(e -> registrar());
