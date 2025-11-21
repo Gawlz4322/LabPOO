@@ -41,4 +41,13 @@ public class VentanaRegistro {
         frame.add(btnRegistrar);
         frame.add(btnCancelar);
     }
+    public void mostrar() { frame.setVisible(true); }
+    public void cerrar() { frame.dispose(); }
+
+    public JButton getBtnRegistrar() { return btnRegistrar; }
+    public JButton getBtnCancelar() { return btnCancelar; }
+    public String getNombre() { return txtNombre.getText(); }
+    public String getUsuario() { return txtUsuario.getText(); }
+    public String getClave() { return new String(txtClave.getPassword()); }
+    public JFrame getFrame() { return frame; }
 }
