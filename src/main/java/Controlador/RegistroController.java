@@ -10,4 +10,9 @@ public class RegistroController {
         this.vista = vista;
         this.session = session;
     }
+    private void initController() {
+        vista.getBtnRegistrar().addActionListener(e -> registrar());
+        vista.getBtnCancelar().addActionListener(e -> vista.cerrar());
+    }
+    private void registrar() {}
 }
