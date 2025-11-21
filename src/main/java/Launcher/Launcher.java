@@ -9,7 +9,7 @@ import Modelo.IRepositorioResultados;
 import Modelo.RepositorioEnMemoria;
 
 public class Launcher {
-    static void main(String[] args) {
+    public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             SessionController session = new SessionController();
             IRepositorioResultados repositorio = new RepositorioEnMemoria();
